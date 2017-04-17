@@ -6,7 +6,7 @@ VALGRIND   = valgrind --leak-check=full --show-reachable=yes
 
 MKFILE     = Makefile
 DEPFILE    = Makefile.dep
-SOURCES    = cppstrtok.cpp auxlib.cpp string_set.cpp
+SOURCES    = token.cpp auxlib.cpp string_set.cpp
 OBJECTS    = ${SOURCES:.cpp=.o}
 EXECBIN    = oc
 SRCFILES   = ${SOURCES} ${MKFILE}
@@ -23,8 +23,11 @@ ${EXECBIN} : ${OBJECTS}
 	${GCC} -c $<
 
 ci :
-	cid + ${CHECKINS}
-	checksource ${CHECKINS}
+	#cid + ${CHECKINS}
+	#checksource ${CHECKINS}
+	git add -A
+	git commit -m "Pushing in current files" 
+	git push
 
 clean :
 	- rm ${OBJECTS}
