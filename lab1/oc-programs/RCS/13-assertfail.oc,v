@@ -1,0 +1,72 @@
+head	1.3;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.3
+date	2011.11.08.22.53.37;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.11.08.22.53.14;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.11.08.22.48.18;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@-
+@
+text
+@// $Id: 13-assertfail.oc,v 1.2 2011-11-08 14:53:14-08 - - $
+
+#undef __OCLIB_OH__
+#include "oclib.oh"
+
+puts (getargv()[0]);
+puts (" was compiled ");
+puts (__DATE__);
+puts (" @@ ");
+puts (__TIME__);
+endl ();
+assert ("assert" == "fail");
+
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 13-assertfail.oc,v 1.1 2011-11-08 14:48:18-08 - - $
+d9 1
+a9 1
+putc (' ');
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id$
+d6 6
+@

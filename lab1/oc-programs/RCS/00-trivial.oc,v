@@ -1,0 +1,27 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2011.09.16.01.50.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@// $Id: 00-trivial.oc,v 1.1 2011-09-15 15:30:10-07 - - $
+//
+// This program does nothing then returns an exit status of 0.
+//
+@

@@ -1,0 +1,212 @@
+head	1.6;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.6
+date	2016.10.26.21.34.06;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2016.06.02.23.03.46;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2012.12.03.21.26.42;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2011.10.28.21.32.36;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.09.26.21.22.22;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.09.24.02.11.59;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@-
+@
+text
+@// $Id: 53-insertionsort.oc,v 1.5 2016-06-02 16:03:46-07 - - $
+//
+// Use insertion sort to print argv in sorted order.
+//
+
+#include "oclib.oh"
+
+int strcmp (string s1, string s2) {
+   int index = 0;
+   bool contin = true;
+   while (contin) {
+      char s1c = s1[index];
+      char s2c = s2[index];
+      int cmp = s1c - s2c;
+      if (cmp != 0) return cmp;
+      if (s1c == '\0') contin = false;
+      index = index + 1;
+   }
+   return 0;
+}
+
+void insertion_sort (int size, string[] array) {
+   int sorted = 1;
+   while (sorted < size) {
+      int slot = sorted;
+      string element = array[slot];
+      bool contin = true;
+      while (contin) {
+         if (slot == 0) {
+            contin = false;
+         }else if (strcmp (array[slot - 1], element) <= 0) {
+            contin = false;
+         }else {
+            array[slot] = array[slot - 1];
+            slot = slot - 1;
+         }
+      }
+      array[slot] = element;
+      sorted = sorted + 1;
+   }
+}
+
+void print_array (string label, int size, string[] array) {
+   endl ();
+   puts (label);
+   puts (":\n");
+   int index = 0;
+   while (index < size) {
+      puts (array[index]);
+      endl ();
+      index = index + 1;
+   }
+}
+
+string[] argv = getargv ();
+int argc = 0;
+while (argv[argc] != null) argc = argc + 1;
+print_array ("unsorted", argc, argv);
+insertion_sort (argc, argv);
+print_array ("sorted", argc, argv);
+
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 53-insertionsort.oc,v 1.4 2012-12-03 13:26:42-08 - - $
+d14 1
+a14 1
+      int cmp = ord s1c - ord s2c;
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 53-insertionsort.oc,v 1.3 2011-10-28 14:32:36-07 - - $
+d3 1
+a3 1
+// Use insertion sort to print argv in osrted order.
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 53-insertionsort.oc,v 1.2 2011-09-26 14:22:22-07 - - $
+d58 1
+a58 1
+print_argv ("unsorted", argc, argv);
+d60 1
+a60 1
+print_argv ("sorted", argc, argv);
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 53-insertionsort.oc,v 1.1 2011-09-23 19:11:59-07 - - $
+d14 1
+a14 1
+      int cmp = ord (s1c) - ord (s2c);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 33-insertionsort.oc,v 1.2 2011-09-20 19:23:27-07 - - $
+d3 1
+a3 1
+// Use insertion sort to print oc_argv in osrted order.
+d8 14
+d43 1
+a43 1
+void print_argv (string label) {
+d47 3
+a49 3
+   int argi = 0;
+   while (argi < oc_argc) {
+      puts (oc_argv[argi]);
+a50 13
+      argi = argi + 1;
+   }
+}
+
+int strcmp (string s1, string s2) {
+   int index = 0;
+   bool contin = true;
+   while (contin) {
+      char s1c = s1[index];
+      char s2c = s2[index];
+      int cmp = ord (s1c) - ord (s2c);
+      if (cmp != 0) return cmp;
+      if (s1c == '\0') contin = false;
+a52 1
+   return 0;
+d55 6
+a60 3
+print_argv ("unsorted");
+insertion_sort (oc_argc, oc_argv);
+print_argv ("sorted");
+@

@@ -1,0 +1,41 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2016.08.18.19.57.54;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.10.04.01.51.47;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@cppstrtok.o: cppstrtok.cpp
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 2
+auxlib.o: auxlib.cpp auxlib.h
+cppstrtok.o: cppstrtok.cpp auxlib.h
+@

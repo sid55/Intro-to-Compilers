@@ -1,0 +1,1505 @@
+head	1.50;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.50
+date	2015.05.21.02.57.55;	author -;	state -;
+branches;
+next	1.49;
+
+1.49
+date	2015.05.21.02.57.21;	author -;	state -;
+branches;
+next	1.48;
+
+1.48
+date	2014.11.22.00.58.19;	author -;	state -;
+branches;
+next	1.47;
+
+1.47
+date	2014.11.22.00.57.07;	author -;	state -;
+branches;
+next	1.46;
+
+1.46
+date	2014.11.11.19.39.50;	author -;	state -;
+branches;
+next	1.45;
+
+1.45
+date	2012.11.17.05.10.41;	author -;	state -;
+branches;
+next	1.44;
+
+1.44
+date	2011.11.19.02.44.19;	author -;	state -;
+branches;
+next	1.43;
+
+1.43
+date	2011.11.19.02.41.06;	author -;	state -;
+branches;
+next	1.42;
+
+1.42
+date	2011.11.18.05.24.49;	author -;	state -;
+branches;
+next	1.41;
+
+1.41
+date	2011.11.18.04.45.27;	author -;	state -;
+branches;
+next	1.40;
+
+1.40
+date	2011.11.18.04.37.26;	author -;	state -;
+branches;
+next	1.39;
+
+1.39
+date	2011.11.18.04.36.29;	author -;	state -;
+branches;
+next	1.38;
+
+1.38
+date	2011.11.18.04.35.41;	author -;	state -;
+branches;
+next	1.37;
+
+1.37
+date	2011.11.18.04.33.27;	author -;	state -;
+branches;
+next	1.36;
+
+1.36
+date	2011.11.18.04.32.17;	author -;	state -;
+branches;
+next	1.35;
+
+1.35
+date	2011.11.17.07.08.30;	author -;	state -;
+branches;
+next	1.34;
+
+1.34
+date	2011.11.17.04.25.02;	author -;	state -;
+branches;
+next	1.33;
+
+1.33
+date	2011.11.17.03.54.38;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2011.11.17.03.51.52;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2011.11.17.03.45.06;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2011.11.16.23.09.47;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2011.11.16.23.09.27;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2011.11.10.05.20.55;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2011.11.10.05.12.45;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2011.11.10.05.12.23;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2011.11.10.05.10.22;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2011.11.10.05.09.14;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2011.11.10.05.08.39;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2011.11.10.05.08.17;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2011.11.10.05.07.23;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2011.11.10.05.06.56;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2011.11.10.05.05.28;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2011.11.10.04.47.53;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2011.11.10.04.46.55;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2011.11.10.04.43.39;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2011.11.10.04.42.58;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2011.11.10.04.27.57;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2011.11.10.04.26.10;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2011.11.10.04.24.14;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2011.11.10.04.22.43;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2011.11.09.21.09.59;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2011.11.09.21.01.52;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2011.11.09.02.04.06;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2011.11.09.02.00.50;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2011.11.09.02.00.03;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2011.11.09.01.57.50;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2011.11.09.01.01.37;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2011.11.08.04.44.44;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.11.04.05.15.51;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.11.04.05.07.55;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.50
+log
+@-
+@
+text
+@// $Id: oclib.c,v 1.49 2015-05-20 19:57:21-07 - - $
+
+#include <assert.h>
+#include <ctype.h>
+#include <libgen.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define __OCLIB_C__
+#include "oclib.oh"
+
+char** oc_argv;
+
+void ____assert_fail (char* expr, char* file, int line) {
+   fflush (NULL);
+   fprintf (stderr, "%s: %s:%d: assert (%s) failed.\n",
+            basename ((char*) oc_argv[0]), file, line, expr);
+   fflush (NULL);
+   abort();
+}
+
+void* xcalloc (int nelem, int size) {
+   void* result = calloc (nelem, size);
+   assert (result != NULL);
+   return result;
+}
+
+void __ocmain (void);
+int main (int argc, char** argv) {
+   (void) argc; // warning: unused parameter 'argc'
+   oc_argv = argv;
+   __ocmain();
+   return EXIT_SUCCESS;
+}
+
+
+char* scan (int (*skipover) (int), int (*stopat) (int)) {
+   int byte;
+   do {
+      byte = getchar();
+      if (byte == EOF) return NULL;
+   } while (skipover (byte));
+   char buffer[0x1000];
+   char* end = buffer;
+   do {
+      *end++ = byte;
+      assert (end < &buffer[sizeof buffer]);
+      *end = '\0';
+      byte = getchar();
+   }while (byte != EOF && ! stopat (byte));
+   char* result = (char*) strdup ((char*) buffer);
+   assert (result != NULL);
+   return result;
+}
+
+int isfalse (int byte)   { return 0 & byte; } 
+int isnl (int byte)      { return byte == '\n'; }
+void __putb (char byte)  { printf ("%s", byte ? "true" : "false"); } 
+void __putc (char byte)  { printf ("%c", byte); } 
+void __puti (int val)    { printf ("%d", val); }
+void __puts (char* str)  { printf ("%s", str); }
+void __endl (void)       { printf ("\n"); fflush (NULL); }
+int __getc (void)        { return getchar(); } 
+char* __getw (void)      { return scan (isspace, isspace); }
+char* __getln (void)     { return scan (isfalse, isnl); } 
+char** __getargv (void)  { return oc_argv; }
+void __exit (int status) { exit (status); }
+
+@
+
+
+1.49
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.48 2014-11-21 16:58:19-08 - - $
+d48 1
+a48 1
+      assert (end < buffer + sizeof buffer);
+d63 1
+a63 1
+void __endl (void)       { printf ("%c", '\n'); fflush (NULL); }
+@
+
+
+1.48
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.47 2014-11-21 16:57:07-08 - - $
+d31 2
+a32 2
+   argc = argc; // warning: unused parameter 'argc'
+   oc_argv = (char**) argv;
+@
+
+
+1.47
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.46 2014-11-11 11:39:50-08 - - $
+d3 1
+@
+
+
+1.46
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.45 2012-11-16 21:10:41-08 - - $
+d12 1
+a12 4
+ubyte** oc_argv;
+ubyte** __getargv (void) {
+   return oc_argv;
+}
+d31 1
+a31 1
+   oc_argv = (ubyte**) argv;
+d37 1
+a37 1
+ubyte* scan (int (*skipover) (int), int (*stopat) (int)) {
+d43 2
+a44 2
+   ubyte buffer[0x1000];
+   ubyte* end = buffer;
+d51 1
+a51 1
+   ubyte* result = (ubyte*) strdup ((char*) buffer);
+d58 2
+a59 2
+void __putb (ubyte byte) { printf ("%s", byte ? "true" : "false"); } 
+void __putc (ubyte byte) { printf ("%c", byte); } 
+d61 1
+a61 1
+void __puts (ubyte* str) { printf ("%s", str); }
+d64 3
+a66 3
+ubyte* __getw (void)     { return scan (isspace, isspace); }
+ubyte* __getln (void)    { return scan (isfalse, isnl); } 
+ubyte** __getargv (void) { return oc_argv; }
+@
+
+
+1.45
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.44 2011-11-18 18:44:19-08 - - $
+d12 4
+a15 1
+ubyte **oc_argv;
+d17 1
+a17 1
+void ____assert_fail (char *expr, char *file, int line) {
+d20 1
+a20 1
+            basename ((char *) oc_argv[0]), file, line, expr);
+d25 2
+a26 2
+void *xcalloc (int nelem, int size) {
+   void *result = calloc (nelem, size);
+d32 1
+a32 1
+int main (int argc, char **argv) {
+d34 1
+a34 1
+   oc_argv = (ubyte **) argv;
+d40 1
+a40 1
+ubyte *scan (int (*skipover) (int), int (*stopat) (int)) {
+d47 1
+a47 1
+   ubyte *end = buffer;
+d54 1
+a54 1
+   ubyte *result = (ubyte *) strdup ((char *) buffer);
+d64 1
+a64 1
+void __puts (ubyte *str) { printf ("%s", str); }
+d67 3
+a69 3
+ubyte *__getw (void)     { return scan (isspace, isspace); }
+ubyte *__getln (void)    { return scan (isfalse, isnl); } 
+ubyte **__getargv (void) { return oc_argv; }
+@
+
+
+1.44
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.43 2011-11-18 18:41:06-08 - - $
+a8 4
+#define xfflush  (void) fflush
+#define xfprintf (void) fprintf
+#define xprintf  (void) printf
+
+d15 5
+a19 5
+   xfflush (NULL);
+   xfprintf (stderr, "%s: %s:%d: assert (%s) failed.\n",
+             basename ((char *) oc_argv[0]), file, line, expr);
+   xfflush (NULL);
+   abort ();
+a22 1
+   // LINTED (sign extension from 32-bit to 64-bit integer)
+d32 1
+a32 1
+   __ocmain ();
+d40 1
+a40 1
+      byte = getchar ();
+a45 1
+      // LINTED (assignment of 32-bit integer to 8-bit integer)
+d49 1
+a49 1
+      byte = getchar ();
+d58 6
+a63 6
+void __putb (ubyte byte) { xprintf ("%s", byte ? "true" : "false"); } 
+void __putc (ubyte byte) { xprintf ("%c", byte); } 
+void __puti (int val)    { xprintf ("%d", val); }
+void __puts (ubyte *str) { xprintf ("%s", str); }
+void __endl (void)       { xprintf ("%c", '\n'); xfflush (NULL); }
+int __getc (void)        { return getchar (); } 
+@
+
+
+1.43
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.42 2011-11-17 21:24:49-08 - - $
+d26 16
+a61 8
+
+void *xcalloc (int nelem, int size) {
+   // LINTED (sign extension from 32-bit to 64-bit integer)
+   void *result = calloc (nelem, size);
+   assert (result != NULL);
+   return result;
+}
+
+a74 8
+void __ocmain (void);
+int main (int argc, char **argv) {
+   argc = argc; // warning: unused parameter 'argc'
+   oc_argv = (ubyte **) argv;
+   __ocmain ();
+   return 0;
+}
+
+@
+
+
+1.42
+log
+@-
+@
+text
+@d1 1
+a1 5
+// $Id: oclib.c,v 1.41 2011-11-17 20:45:27-08 - - $
+
+//
+// This is the oc library, coded in C.
+//
+@
+
+
+1.41
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.40 2011-11-17 20:37:26-08 - - $
+d17 1
+a17 1
+#define __OCLIB_C_NAMES__
+@
+
+
+1.40
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.38 2011-11-17 20:35:41-08 - - $
+d18 1
+a18 1
+#include "oclib.oh-new"
+@
+
+
+1.39
+log
+@-
+@
+text
+@d22 1
+a22 1
+void ____assert_fail (ubyte *expr, ubyte *file, int line) {
+@
+
+
+1.38
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.37 2011-11-17 20:33:27-08 - - $
+d22 1
+a22 1
+void ____assert_fail (STRING (expr), STRING (file), int line) {
+@
+
+
+1.37
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.36 2011-11-17 20:32:17-08 - - $
+d22 1
+a22 1
+void ____assert_fail (char *expr, char *file, int line) {
+d73 1
+@
+
+
+1.36
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.35 2011-11-16 23:08:30-08 - - $
+a21 2
+#define assert(expr) \
+        {if (! (expr)) ____assert_fail (#expr, __FILE__, __LINE__);}
+@
+
+
+1.35
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.34 2011-11-16 20:25:02-08 - - $
+d17 3
+a19 1
+typedef unsigned char ubyte;
+a75 1
+   assert (sizeof argc == sizeof argv);
+@
+
+
+1.34
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.33 2011-11-16 19:54:38-08 - - $
+a72 1
+   argc = argc;
+d74 1
+@
+
+
+1.33
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.32 2011-11-16 19:51:52-08 - - $
+a16 1
+typedef int (*istype) (int);
+d18 1
+a18 2
+typedef ubyte *ustring;
+ubyte **oc_argv = NULL;
+d30 1
+a30 1
+ubyte *scan (istype skipover, istype stopat) {
+d45 1
+a45 1
+   ubyte *result = (ustring) strdup ((char *) buffer);
+@
+
+
+1.32
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.31 2011-11-16 19:45:06-08 - - $
+d20 1
+a20 1
+ustring *oc_argv = NULL;
+d32 1
+a32 1
+ustring scan (istype skipover, istype stopat) {
+d47 1
+a47 1
+   ustring result = (ustring) strdup ((char *) buffer);
+d60 12
+a71 12
+int isfalse (int byte)    { return 0 & byte; } 
+int isnl (int byte)       { return byte == '\n'; }
+void __putb (ubyte byte)  { xprintf ("%s", byte ? "true" : "false"); } 
+void __putc (ubyte byte)  { xprintf ("%c", byte); } 
+void __puti (int val)     { xprintf ("%d", val); }
+void __puts (ustring str) { xprintf ("%s", str); }
+void __endl (void)        { xprintf ("%c", '\n'); xfflush (NULL); }
+int __getc (void)         { return getchar (); } 
+ustring __getw (void)     { return scan (isspace, isspace); }
+ustring __getln (void)    { return scan (isfalse, isnl); } 
+ustring *__getargv (void) { return oc_argv; }
+void __exit (int status)  { exit (status); }
+d76 1
+a76 1
+   oc_argv = (ustring *) argv;
+@
+
+
+1.31
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.30 2011-11-16 15:09:47-08 - - $
+a31 7
+void *xcalloc (int nelem, int size) {
+   // LINTED (sign extension from 32-bit to 64-bit integer)
+   void *result = calloc (nelem, size);
+   assert (result != NULL);
+   return result;
+}
+
+d52 8
+@
+
+
+1.30
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.29 2011-11-16 15:09:27-08 - - $
+a65 1
+int __atoi (ustring str)  { return atoi ((char *) str); }
+@
+
+
+1.29
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.28 2011-11-09 21:20:55-08 - - $
+d66 1
+a66 1
+int __atoi (ustring str)  { return atoi (str); }
+@
+
+
+1.28
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.27 2011-11-09 21:12:45-08 - - $
+d66 1
+d70 1
+a70 1
+ustring *__oc_argv (void) { return oc_argv; }
+d73 1
+a73 1
+void __oc_main (void);
+d77 1
+a77 1
+   __oc_main ();
+@
+
+
+1.27
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.25 2011-11-09 21:10:22-08 - - $
+d19 2
+a20 1
+ubyte **oc_argv = NULL;
+d27 1
+a27 1
+             basename ((char*) oc_argv[0]), file, line, expr);
+d39 1
+a39 1
+ubyte *scan (istype skipover, istype stopat) {
+d54 1
+a54 1
+   ubyte *result = (ubyte*) strdup ((char*) buffer);
+d59 12
+a70 12
+int isfalse (int byte)   { return 0 & byte; } 
+int isnl (int byte)      { return byte == '\n'; }
+void __putb (ubyte byte) { xprintf ("%s", byte ? "true" : "false"); } 
+void __putc (ubyte byte) { xprintf ("%c", byte); } 
+void __puti (int val)    { xprintf ("%d", val); }
+void __puts (ubyte *str) { xprintf ("%s", str); }
+void __endl (void)       { xprintf ("%c", '\n'); xfflush (NULL); }
+int __getc (void)        { return getchar (); } 
+ubyte *__getw (void)     { return scan (isspace, isspace); }
+ubyte *__getln (void)    { return scan (isfalse, isnl); } 
+ubyte **__oc_argv (void) { return oc_argv; }
+void __exit (int status) { exit (status); }
+d75 1
+a75 1
+   oc_argv = (ubyte**) argv;
+@
+
+
+1.26
+log
+@-
+@
+text
+@d60 5
+a64 5
+void __putb (ubyte byte) { printf ("%s", byte ? "true" : "false"); } 
+void __putc (ubyte byte) { printf ("%c", byte); } 
+void __puti (int val)    { printf ("%d", val); }
+void __puts (ubyte *str) { printf ("%s", str); }
+void __endl (void)       { printf ("%c", '\n'); xfflush (NULL); }
+@
+
+
+1.25
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.24 2011-11-09 21:09:14-08 - - $
+d13 4
+d24 4
+a27 4
+   fflush (NULL);
+   fprintf (stderr, "%s: %s:%d: assert (%s) failed.\n",
+            basename ((char*) oc_argv[0]), file, line, expr);
+   fflush (NULL);
+d61 1
+a61 1
+void __putc (ubyte byte) { putchar (byte); } 
+d64 1
+a64 1
+void __endl (void)       { putchar ('\n'); fflush (NULL); }
+@
+
+
+1.24
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.23 2011-11-09 21:08:39-08 - - $
+d54 1
+a54 1
+int isfalse (int byte)   { return 0; } 
+@
+
+
+1.23
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.21 2011-11-09 21:07:23-08 - - $
+d43 1
+d54 1
+a54 1
+int isfalse (int byte)   { return 0 && byte; } 
+@
+
+
+1.22
+log
+@-
+@
+text
+@d43 1
+a43 1
+      *end++ = (ubyte) byte;
+@
+
+
+1.21
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.20 2011-11-09 21:06:56-08 - - $
+d28 2
+a29 1
+   void *result = calloc ((size_t) nelem, (size_t) size);
+@
+
+
+1.20
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.19 2011-11-09 21:05:28-08 - - $
+d42 1
+a42 1
+      *end++ = byte;
+@
+
+
+1.19
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.18 2011-11-09 20:47:53-08 - - $
+d28 1
+a28 1
+   void *result = calloc (nelem, size);
+@
+
+
+1.18
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.17 2011-11-09 20:46:55-08 - - $
+d47 1
+a47 1
+   ubyte *result = strdup ((char*) buffer);
+@
+
+
+1.17
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.16 2011-11-09 20:43:39-08 - - $
+d22 1
+a22 1
+            basename (oc_argv[0]), file, line, expr);
+d47 1
+a47 1
+   ubyte *result = strdup ((ubyte*) buffer);
+@
+
+
+1.16
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.14 2011-11-09 20:27:57-08 - - $
+d19 1
+a19 1
+void ____assert_fail (ubyte *expr, ubyte *file, int line) {
+@
+
+
+1.15
+log
+@-
+@
+text
+@d47 1
+a47 1
+   ubyte *result = strdup (buffer);
+d68 1
+a68 1
+   oc_argv = (ubyte **) argv;
+@
+
+
+1.14
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.11 2011/11/10 04:22:43 - - $
+d15 1
+a15 2
+typedef ubyte *string;
+string *oc_argv = NULL;
+d19 1
+a19 1
+void ____assert_fail (string expr, string file, int line) {
+d33 1
+a33 1
+string scan (istype skipover, istype stopat) {
+d47 1
+a47 1
+   string result = strdup (buffer);
+d52 1
+a52 1
+int isfalse (int byte)   { return 0; } 
+d57 1
+a57 1
+void __puts (string str) { printf ("%s", str); }
+d60 3
+a62 3
+string __getw (void)     { return scan (isspace, isspace); }
+string __getln (void)    { return scan (isfalse, isnl); } 
+string *__oc_argv (void) { return oc_argv; }
+d67 2
+a68 1
+   oc_argv = argv;
+@
+
+
+1.13
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.12 2011-11-09 20:24:14-08 - - $
+d19 1
+a19 3
+        {if (! (expr)) \
+           ____assert_fail ((string) #expr, __FILE__, __LINE__); \
+        }
+d23 1
+a23 1
+            basename ((char*) oc_argv[0]), file, line, expr);
+d48 1
+a48 1
+   string result = (string) strdup ((char*) buffer);
+d68 1
+a68 1
+   oc_argv = (string*) argv;
+@
+
+
+1.12
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.11 2011-11-09 20:22:43-08 - - $
+d19 3
+a21 1
+        {if (! (expr)) ____assert_fail (#expr, __FILE__, __LINE__);}
+d25 1
+a25 1
+            basename (oc_argv[0]), file, line, expr);
+@
+
+
+1.11
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.10 2011-11-09 13:09:59-08 - - $
+d48 1
+a48 1
+   string result = strdup (buffer);
+d68 1
+a68 1
+   oc_argv = argv;
+@
+
+
+1.10
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.9 2011-11-09 13:01:52-08 - - $
+a4 1
+// It is not intended to be compiled with oc.
+d13 5
+d20 1
+a20 3
+char **oc_argv = NULL;
+
+void ____assert_fail (char *expr, char *file, int line) {
+d34 1
+a34 4
+typedef int (*istype) (int);
+int isfalse (int byte) { return 0; } 
+int isnl (int byte) { return byte == '\n'; }
+char *scan (istype skipover, istype stopat) {
+d40 2
+a41 2
+   char buffer[0x1000];
+   char *end = buffer;
+d48 1
+a48 1
+   char *result = strdup (buffer);
+d53 11
+a63 9
+void __putb (char byte) { printf ("%s", byte ? "true" : "false"); } 
+void __putc (char byte) { printf ("%c", byte); } 
+void __puti (int n) { printf ("%d", n); }
+void __puts (char *s) { printf ("%s", s); }
+void __endl (void) { putchar ('\n'); fflush (NULL); }
+int __getc (void) { return getchar (); } 
+char *__getw (void) { return scan (isspace, isspace); }
+char *__getln (void) { return scan (isfalse, isnl); } 
+char **__oc_argv (void) { return oc_argv; }
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.7 2011/11/09 02:00:50 - - $
+a7 1
+#include <assert.h>
+d9 1
+d14 12
+a58 1
+
+d62 2
+d65 1
+a65 2
+char **oc_argv = NULL;
+char **__oc_argv (void) { return oc_argv; }
+d68 2
+a69 10
+   return __oc_main ();
+}
+
+void __exit (int status) { exit (status); }
+void ____assert_fail (char *expr, char *file, int line) {
+   fflush (NULL);
+   fprintf (stderr, "%s: %s:%d: assert (%s) failed.\n",
+            oc_argv[0], file, line, expr);
+   fflush (NULL);
+   abort ();
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.7 2011-11-08 18:00:50-08 - - $
+d5 1
+d23 1
+a23 1
+char *scan (istype isskip, istype isstop) {
+d28 1
+a28 1
+   } while (isskip (byte));
+d36 1
+a36 1
+   }while (byte != EOF && ! isstop (byte));
+a53 1
+int __oc_main (void);
+d56 1
+a56 2
+   int result = __oc_main ();
+   return result;
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.6 2011-11-08 18:00:03-08 - - $
+a4 1
+// It is not intended to be compiled with oc.
+d53 1
+d56 2
+a57 1
+   return __oc_main ();
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.5 2011-11-08 17:57:50-08 - - $
+d52 7
+a59 1
+
+a67 7
+char **oc_argv = NULL;
+char **__oc_argv (void) { return oc_argv; }
+int main (int argc, char **argv) {
+   oc_argv = argv;
+   return __oc_main ();
+}
+
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.4 2011-11-08 17:01:37-08 - - $
+d63 1
+a63 1
+char **__getargv (void) { return oc_argv; }
+d66 1
+a66 1
+   return __oc_main();
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.3 2011-11-07 20:44:44-08 - - $
+d14 2
+a15 20
+enum {FALSE = 0, TRUE = 1};
+
+typedef unsigned char ubyte;
+typedef ubyte bool;
+typedef int word;
+typedef void *addr;
+typedef ubyte *string;
+typedef string *string_array;
+typedef int (*istype) (int);
+
+string *oc_argv = NULL;
+
+struct {
+   word size;
+   word end;
+   string chars;
+} buffer;
+
+addr xcalloc (word nelem, word size) {
+   addr result = calloc (nelem, size);
+d20 18
+a37 2
+string xstrdup (string buf) {
+   string result = strdup (buf);
+d42 9
+a50 55
+void append_buf (ubyte c) {
+   buffer.chars[buffer.end] = c;
+   ++buffer.end;
+   if (buffer.end >= buffer.size) {
+      buffer.size *= 2;
+      buffer.chars = realloc (buffer.chars, buffer.size);
+      assert (buffer.chars != NULL);
+   }
+   buffer.chars[buffer.end] = '\0';
+}
+
+int skip (istype space) {
+   int c;
+   do c = getchar (); while (c != EOF && space (c));
+   return c;
+}
+
+string scan (char c, istype space) {
+   if (c == EOF) return NULL;
+   buffer.end = 0;
+   do {
+      append_buf (c);
+      c = getchar ();
+   }while (c != EOF && ! space (c));
+   return xstrdup (buffer.chars);
+}
+
+int isnl (int c) {
+   return c == '\n';
+}
+
+void __putb (ubyte b) {
+   printf ("%s", b ? "true" : "false");
+}
+
+void __putc (ubyte c) {
+   putchar (c);
+}
+
+void __puti (word n) {
+   printf ("%d", n);
+}
+
+void __endl (void) {
+   putchar ('\n');
+   fflush (NULL);
+}
+
+void __puts (string s) {
+   printf ("%s", s);
+}
+
+word __getc (void) {
+   return getchar ();
+}
+d52 1
+a52 15
+string __getw (void) {
+   return scan (skip (isspace), isspace);
+}
+
+string __getln (void) {
+   return scan (getchar (), isnl);
+}
+
+string_array __getargv (void) {
+   return oc_argv;
+}
+
+void __exit (word status) {
+   exit (status);
+}
+d54 1
+a54 1
+void ____assert_fail (string expr, string file, int line) {
+d62 3
+a64 1
+int main (int argc, string *argv) {
+a65 2
+   buffer.size = 1024;
+   buffer.chars = xcalloc (1, buffer.size);
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.2 2011-11-03 22:15:51-07 - - $
+d22 1
+d39 3
+a41 3
+   string out = (ubyte*) strdup ((char*) buf);
+   assert (out != NULL);
+   return out;
+d55 20
+d89 1
+a89 1
+   fflush (stdout);
+d101 1
+a101 11
+   buffer.end = 0;
+   int c;
+   do {
+      c = getchar ();
+      if (c == EOF) return NULL;
+   }while (isspace (c));
+   do {
+      append_buf (c);
+      c = getchar ();
+   }while (c != EOF && !isspace (c));
+   return xstrdup (buffer.chars);
+d105 1
+a105 10
+   buffer.end = 0;
+   int c;
+   bool gotchar = FALSE;
+   for (;;) {
+      c = getchar ();
+      if (c == EOF) break;
+      gotchar = TRUE;
+      if (c == '\n') break;
+      append_buf (c);
+   }
+d127 1
+a127 2
+   buffer.end = 0;
+   buffer.chars = xcalloc (buffer.size);
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.1 2011-11-03 22:07:55-07 - - $
+d21 1
+d29 1
+a29 5
+} get_buf;
+
+word __oc_main (void) {
+   return 0;
+}
+d44 6
+a49 6
+   get_buf.chars[get_buf.end] = c;
+   ++get_buf.end;
+   if (get_buf.end >= get_buf.size) {
+      get_buf.size *= 2;
+      get_buf.chars = realloc (get_buf.chars, get_buf.size);
+      assert (get_buf.chars != NULL);
+d51 1
+a51 1
+   get_buf.chars[get_buf.end] = '\0';
+d80 1
+d90 1
+a90 1
+   return xstrdup (get_buf.chars);
+d94 1
+d106 1
+a106 1
+string *__getargv (void) {
+d114 8
+d124 3
+a126 3
+   get_buf.size = 1024;
+   get_buf.end = 0;
+   get_buf.chars = xcalloc (get_buf.size);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.c,v 1.22 2011-10-28 19:58:57-07 - - $
+d14 1
+a14 2
+#define FALSE 0
+#define TRUE 1
+@

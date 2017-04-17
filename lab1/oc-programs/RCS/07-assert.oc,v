@@ -1,0 +1,46 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2012.11.27.21.38.26;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2012.11.27.21.38.15;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@// $Id: 07-assert.oc,v 1.1 2012-11-27 13:38:15-08 - - $
+
+#include "oclib.oh"
+assert ("null" == null);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id$
+d4 1
+a4 1
+assert ("hull" == null);
+@

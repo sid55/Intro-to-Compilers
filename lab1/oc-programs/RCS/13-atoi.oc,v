@@ -1,0 +1,61 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2011.09.16.01.50.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@// $Id: 13-atoi.oc,v 1.1 2011-09-15 18:43:10-07 - - $
+
+#include "oclib.oh"
+
+int atoi (string str) {
+   bool neg = false;
+   int num = 0;
+   int digit = 0;
+   if (str.size > 0) {
+      if (str[0] == '-') {
+         digit = digit + 1;
+         neg = true;
+      }
+      bool contin = true;
+      while (contin) {
+         if (digit == str.size) {
+            contin = false;
+         }else {
+            char c = str[digit];
+            digit = digit + 1;
+            if (c < '0') contin = false;
+            else if (c > '9') contin = false;
+            else num = num * 10 + ord (c) - ord ('0');
+         }
+   }
+   return num;
+}
+
+string[] oc_argv = argv ();
+int argi = 0;
+while (argi < oc_argv.size) {
+   string arg = oc_argv[argi];
+   puts (arg);
+   puts (" = ");
+   puts (atoi (arg));
+   endl ();
+}
+
+@

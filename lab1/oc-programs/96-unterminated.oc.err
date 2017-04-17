@@ -1,0 +1,12 @@
+96-unterminated.oc:5:12: warning: missing terminating " character [enabled by default]
+ string s = "abc;
+            ^
+96-unterminated.oc:6:10: warning: missing terminating ' character [enabled by default]
+ char c = 'a;
+          ^
+96-unterminated.oc:7:5: warning: missing terminating " character [enabled by default]
+ s = "abcd\";
+     ^
+96-unterminated.oc:8:5: warning: missing terminating " character [enabled by default]
+ s = "abc|\
+     ^

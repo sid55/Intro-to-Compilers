@@ -1,0 +1,148 @@
+head	1.5;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.5
+date	2016.10.26.21.34.06;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2012.12.03.21.24.51;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2011.10.26.01.21.10;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.09.21.02.23.27;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.09.16.01.50.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@-
+@
+text
+@// $Id: 42-viiiqueens.oc,v 1.4 2012-12-03 13:24:51-08 - - $
+
+#include "oclib.oh"
+
+#define BOARD_SIZE 8
+int[] board = new int[BOARD_SIZE];
+
+bool is_safe (int newcol) {
+   int col = 0;
+   while (col < newcol) {
+      if (board[col] == board[newcol]) return false;
+      int diagonal = board[col] - board[newcol];
+      if (diagonal == col - newcol) return false;
+      if (diagonal == newcol - col) return false;
+      col = col + 1;
+   }
+   return true;
+}
+
+void printqueens () {
+   int col = 0;
+   while (col < BOARD_SIZE) {
+      putc (board[col] + '1');
+      col = col + 1;
+   }
+   putc ('\n');
+}
+
+void queens (int newcol) {
+   if (newcol == BOARD_SIZE) printqueens ();
+   else {
+      int row = 0;
+      while (row < BOARD_SIZE) {
+         board[newcol] = row;
+         if (is_safe (newcol)) queens (newcol + 1);
+         row = row + 1;
+      }
+   }
+}
+
+// Main program.
+queens (0);
+
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 42-viiiqueens.oc,v 1.3 2011-10-25 18:21:10-07 - - $
+d23 1
+a23 1
+      putc (chr (board[col] + ord '1'));
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 42-viiiqueens.oc,v 1.2 2011-09-20 19:23:27-07 - - $
+d23 1
+a23 1
+      putchar (chr (board[col] + ord '1'));
+d26 1
+a26 1
+   putchar ('\n');
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 42-viiiqueens.oc,v 1.1 2011-09-15 18:50:16-07 - - $
+d5 1
+a5 1
+#cefine BOARD_SIZE 8
+d23 1
+a23 1
+      putchar (chr (board[col] + ord ('1')));
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 42-viiiqueens.oc,v 1.2 2011-09-15 18:46:11-07 - - $
+d22 1
+a22 1
+   while (col < board.size) {
+@

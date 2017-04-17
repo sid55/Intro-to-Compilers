@@ -1,0 +1,103 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2011.09.21.02.23.27;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.09.16.01.50.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@// $Id: 33-insertionsort.oc,v 1.1 2011-09-15 18:50:16-07 - - $
+//
+// Use insertion sort to print oc_argv in osrted order.
+//
+
+#include "oclib.oh"
+
+void insertion_sort (int size, string[] array) {
+   int sorted = 1;
+   while (sorted < size) {
+      int slot = sorted;
+      string element = array[slot];
+      bool continue = true;
+      while (continue) {
+         if (slot == 0) {
+            continue = false;
+         }else if (strcmp (array[slot - 1], element) <= 0) {
+            continue = false;
+         }else {
+            array[slot] = array[slot - 1];
+            slot = slot - 1;
+         }
+      }
+      array[slot] = element;
+      sorted = sorted + 1;
+   }
+}
+
+void print_argv (string label) {
+   endl ();
+   puts (label);
+   puts (":\n");
+   int argi = 0;
+   while (argi < oc_argc) {
+      puts (oc_argv[argi]);
+      endl ();
+      argi = argi + 1;
+   }
+}
+
+print_argv ("unsorted");
+insertion_sort (oc_argc, oc_argv);
+print_argv ("sorted");
+
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 33-insertionsort.oc,v 1.1 2011-09-15 15:30:10-07 - - $
+a5 2
+#define __OCLIB_OH__
+
+d8 1
+a8 1
+void insertion_sort (string[] array) {
+d10 1
+a10 1
+   while (sorted < array.size) {
+d29 1
+a29 5
+string[] oc_argv = argv ();
+insertion_sort (oc_argv);
+int argi = 0;
+while (argi < oc_argv.size) {
+   puts (oc_argv[argi]);
+d31 8
+a38 1
+   argi = argi + 1;
+d41 4
+@

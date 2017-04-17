@@ -1,0 +1,2476 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2011.11.07.20.09.34;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(14:34:33)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 283.25 736.5 Tm
+(oclib.oh)Tj
+-99.502 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: oclib.oh,v 1.7 2011/10/26 01:15:52 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#ifndef __OCLIB_OH__)]TJ
+T*[(4:)-600(#define __OCLIB_OH__)]TJ
+(5:)'
+T*[(6:)-600(#define EOF \(-1\))]TJ
+(7:)'
+T*[(8:)-600(void putb \(bool b\);)]TJ
+T*[(9:)-600(void putc \(char c\);)]TJ
+-6 -11 Td
+[(10:)-600(void puti \(int i\);)]TJ
+T*[(11:)-600(void puts \(string s\);)]TJ
+T*[(12:)-600(void endl \(\);)]TJ
+(13:)'
+T*[(14:)-600(int getc \(\);)]TJ
+T*[(15:)-600(string getw \(\);)]TJ
+T*[(16:)-600(string getln \(\);)]TJ
+T*[(17:)-600(string[] getargv \(\);)]TJ
+(18:)'
+T*[(19:)-600(void exit \(int status\);)]TJ
+(20:)'
+T*[(21:)-600(void __assert_fail \(string expr, string file, int line\);)]TJ
+T*[(22:)-600(#define assert\(expr\) \\)]TJ
+T*[(23:)-600(        {if \(! \(expr\)\) __assert_fail \(#expr, __FILE__, __LINE__\);})]TJ
+(24:)'
+T*[(25:)-600(#endif)]TJ
+(26:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+1358
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 271.512 736.5 Tm
+(00-trivial.oc)Tj
+-87.7637 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 00-trivial.oc,v 1.1 2011-09-15 18:50:16-07 - - $)]TJ
+11 TL
+T*[(2:)-600(//)]TJ
+T*[(3:)-600(// This program does nothing then returns an exit status of 0.)]TJ
+T*[(4:)-600(//)]TJ
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+709
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 274.312 736.5 Tm
+(01-hello.oc)Tj
+-90.5633 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 01-hello.oc,v 1.1 2011-09-15 18:50:16-07 - - $)]TJ
+11 TL
+T*[(2:)-600(// Simple hello world program.)]TJ
+(3:)'
+T*[(4:)-600(#include "oclib.oh")]TJ
+(5:)'
+T*[(6:)-600(puts \("Hello, world!\\n"\);)]TJ
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+728
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 275.089 736.5 Tm
+(03-test3.oc)Tj
+-91.3402 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 03-test3.oc,v 1.1 2011-09-15 18:50:16-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(int a = 3;)]TJ
+T*[(4:)-600(int b = 8;)]TJ
+T*[(5:)-600(int c = a + b;)]TJ
+T*[(6:)-600(a = b + c;)]TJ
+T*[(7:)-600(puti \(a\);)]TJ
+T*[(8:)-600(putc \('\\n'\);)]TJ
+(9:)'
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+772
+endobj
+26 0 obj
+<</Length 27 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 275.089 736.5 Tm
+(04-test4.oc)Tj
+-91.3402 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 04-test4.oc,v 1.1 2011-09-15 18:50:16-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include "oclib.oh")]TJ
+(4:)'
+T*[(5:)-600(struct foo {)]TJ
+T*[(6:)-600(   int a;)]TJ
+T*[(7:)-600(})]TJ
+(8:)'
+T*[(9:)-600(int a = 6;)]TJ
+-6 -11 Td
+[(10:)-600(foo b = new foo \(\);)]TJ
+T*[(11:)-600(b.a = 8;)]TJ
+T*[(12:)-600(a = a * b.a + 6;;)]TJ
+(13:)'
+T*[(14:)-600(puti \(a\);)]TJ
+T*[(15:)-600(putc \(' '\);)]TJ
+T*[(16:)-600(puti \(b.a\);)]TJ
+T*[(17:)-600(endl \(\);)]TJ
+(18:)'
+ET
+Q
+Q
+endstream
+endobj
+27 0 obj
+983
+endobj
+30 0 obj
+<</Length 31 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 275.089 736.5 Tm
+(05-test5.oc)Tj
+-91.3402 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 05-test5.oc,v 1.1 2011-09-15 18:50:16-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include "oclib.oh")]TJ
+(4:)'
+T*[(5:)-600(bool a = true;)]TJ
+T*[(6:)-600(a = false;)]TJ
+(7:)'
+T*[(8:)-600(// The following will scan and parse, but error out at type check.)]TJ
+T*[(9:)-600(a = b + c * d;)]TJ
+-6 -11 Td
+(10:)Tj
+ET
+Q
+Q
+endstream
+endobj
+31 0 obj
+832
+endobj
+34 0 obj
+<</Length 35 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 275.089 736.5 Tm
+(06-test6.oc)Tj
+-91.3402 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 06-test6.oc,v 1.2 2011-09-19 14:25:40-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include "oclib.oh")]TJ
+(4:)'
+T*[(5:)-600(int f0 \(\);)]TJ
+T*[(6:)-600(int f1 \(int a\);)]TJ
+T*[(7:)-600(int f2 \(int a, int b\);)]TJ
+T*[(8:)-600(int f3 \(string a, string b, string c\);)]TJ
+T*[(9:)-600(int f4 \(foo a, bar b\);)]TJ
+-6 -11 Td
+[(10:)-600(string s = "a";)]TJ
+T*[(11:)-600(string[] sa = new string[10];)]TJ
+(12:)'
+ET
+Q
+Q
+endstream
+endobj
+35 0 obj
+933
+endobj
+38 0 obj
+<</Length 39 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 275.865 736.5 Tm
+(09-junk.oc)Tj
+-92.1168 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 09-junk.oc,v 1.2 2011-09-20 19:23:27-07 - - $)]TJ
+11 TL
+T*[(2:)-600(//)]TJ
+T*[(3:)-600(// This file should scan and parse correctly, )]TJ
+T*[(4:)-600(// but fail to type check.)]TJ
+T*[(5:)-600(//)]TJ
+(6:)'
+T*[(7:)-600(int[] a = null;)]TJ
+T*[(8:)-600(reference[] a = new string[10];)]TJ
+T*[(9:)-600(void foo \(\);)]TJ
+-6 -11 Td
+[(10:)-600(void foo \(int a\);)]TJ
+T*[(11:)-600(void foo \(int[] a, int[] b\) {int x = a + b;})]TJ
+T*[(12:)-600(struct foo { int a; int b; })]TJ
+(13:)'
+T*[(14:)-600(a + b;)]TJ
+T*[(15:)-600(f \(\);)]TJ
+T*[(16:)-600(f \(x, y+3, z\);)]TJ
+T*[(17:)-600(foo + bar;)]TJ
+T*[(18:)-600(a = b = c = d;)]TJ
+T*[(19:)-600(test = abc + def + ghi;)]TJ
+T*[(20:)-600(this + 23 * a + "hello";)]TJ
+T*[(21:)-600(while \(a < b\) f = f + 1;)]TJ
+T*[(22:)-600(return 3 + 4;)]TJ
+T*[(23:)-600(a[i] = b[j];)]TJ
+T*[(24:)-600(return;)]TJ
+T*[(25:)-600(while \(true\) {a = 3; b = 4; })]TJ
+T*[(26:)-600(if \(a == b\) f \(x\);)]TJ
+T*[(27:)-600(if \(a != b\) y = 3; else f \(y, z\);)]TJ
+(28:)'
+ET
+Q
+Q
+endstream
+endobj
+39 0 obj
+1516
+endobj
+42 0 obj
+<</Length 43 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 265.295 736.5 Tm
+(10-hundred.oc)Tj
+-81.5469 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 10-hundred.oc,v 1.1 2011-09-15 18:50:16-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include "oclib.oh")]TJ
+(4:)'
+T*[(5:)-600(int count = 0;)]TJ
+T*[(6:)-600(while \(count <= 100\) {)]TJ
+T*[(7:)-600(   count = count + 1;)]TJ
+T*[(8:)-600(   puti \(count\);)]TJ
+T*[(9:)-600(   endl \(\);)]TJ
+-6 -11 Td
+[(10:)-600(})]TJ
+ET
+Q
+Q
+endstream
+endobj
+43 0 obj
+842
+endobj
+46 0 obj
+<</Length 47 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 264.127 736.5 Tm
+(11-numbers.oc)Tj
+-80.3785 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 11-numbers.oc,v 1.1 2011-09-15 18:50:16-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include "oclib.oh")]TJ
+(4:)'
+T*[(5:)-600(int number = 1;)]TJ
+T*[(6:)-600(while \(number > 0\) {)]TJ
+T*[(7:)-600(   puti \(number\);)]TJ
+T*[(8:)-600(   putc \('\\n'\);)]TJ
+T*[(9:)-600(   number = number + number;)]TJ
+-6 -11 Td
+[(10:)-600(})]TJ
+T*[(11:)-600(puti \(number\);)]TJ
+T*[(12:)-600(putc \('\\n'\);)]TJ
+(13:)'
+ET
+Q
+Q
+endstream
+endobj
+47 0 obj
+928
+endobj
+50 0 obj
+<</Length 51 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 273.15 736.5 Tm
+(12-elseif.oc)Tj
+-89.4016 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 12-elseif.oc,v 1.1 2011-09-15 18:50:16-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(int a = 3;)]TJ
+(4:)'
+T*[(5:)-600(if \(a == 1\) puts \("one"\);)]TJ
+T*[(6:)-600(else if \(a == 2\) puts \("two"\);)]TJ
+T*[(7:)-600(else if \(a == 3\) puts \("three"\);)]TJ
+T*[(8:)-600(else puts \("many"\);)]TJ
+T*[(9:)-600(endl \(\);)]TJ
+ET
+Q
+Q
+endstream
+endobj
+51 0 obj
+843
+endobj
+54 0 obj
+<</Length 55 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 263.672 736.5 Tm
+(20-fib-array.oc)Tj
+-79.9238 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 20-fib-array.oc,v 1.2 2011-09-20 19:23:27-07 - - $)]TJ
+11 TL
+T*[(2:)-600(//)]TJ
+T*[(3:)-600(// Put Fibonacci numbers in an array, then print them.)]TJ
+T*[(4:)-600(//)]TJ
+(5:)'
+T*[(6:)-600(#define FIB_SIZE 30)]TJ
+T*[(7:)-600(int[] fibonacci = new int[FIB_SIZE];)]TJ
+(8:)'
+T*[(9:)-600(fibonacci[0] = 0;)]TJ
+-6 -11 Td
+[(10:)-600(fibonacci[1] = 1;)]TJ
+(11:)'
+T*[(12:)-600(int index = 2;)]TJ
+T*[(13:)-600(while \(index < FIB_SIZE\) {)]TJ
+T*[(14:)-600(   fibonacci[index] = fibonacci[index - 1] + fibonacci[index - 2];)]TJ
+T*[(15:)-600(   index = index + 1;)]TJ
+T*[(16:)-600(})]TJ
+(17:)'
+T*[(18:)-600(index = 0;)]TJ
+T*[(19:)-600(puts \("Numeri di figlio Bonacci\\n"\);)]TJ
+T*[(20:)-600(while \(index < FIB_SIZE\) {)]TJ
+T*[(21:)-600(   puts \("fibonacci["\);)]TJ
+T*[(22:)-600(   puti \(index\);)]TJ
+T*[(23:)-600(   puts \(" = "\);)]TJ
+T*[(24:)-600(   puti \(fibonacci[index]\);)]TJ
+T*[(25:)-600(   endl \(\);)]TJ
+T*[(26:)-600(   index = index + 1;)]TJ
+T*[(27:)-600(})]TJ
+ET
+Q
+Q
+endstream
+endobj
+55 0 obj
+1499
+endobj
+58 0 obj
+<</Length 59 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 253.635 736.5 Tm
+(21-eratosthenes.oc)Tj
+-69.8863 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 21-eratosthenes.oc,v 1.2 2011-09-19 14:25:40-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include "oclib.oh")]TJ
+T*[(4:)-600(#define SIZE 100)]TJ
+T*[(5:)-600(#define LOWPRIME 2)]TJ
+(6:)'
+T*[(7:)-600(bool[] sieve = new bool[SIZE];)]TJ
+T*[(8:)-600(int index = LOWPRIME;)]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(while \(index < SIZE\) {)]TJ
+T*[(11:)-600(   sieve[index] = true;)]TJ
+T*[(12:)-600(   index = index + 1;)]TJ
+T*[(13:)-600(})]TJ
+(14:)'
+T*[(15:)-600(int prime = LOWPRIME;)]TJ
+T*[(16:)-600(while \(prime < SIZE\) {)]TJ
+T*[(17:)-600(   if \(sieve[prime]\) {)]TJ
+T*[(18:)-600(      index = prime * 2;)]TJ
+T*[(19:)-600(      while \(index < SIZE\) {)]TJ
+T*[(20:)-600(         sieve[index] = false;)]TJ
+T*[(21:)-600(         index = index + prime;)]TJ
+T*[(22:)-600(      })]TJ
+T*[(23:)-600(   })]TJ
+T*[(24:)-600(   prime = prime + 1;)]TJ
+T*[(25:)-600(})]TJ
+(26:)'
+T*[(27:)-600(index = LOWPRIME;)]TJ
+T*[(28:)-600(while \(index < SIZE\) {)]TJ
+T*[(29:)-600(   if \(sieve[index]\) {)]TJ
+T*[(30:)-600(      puti \(index\);)]TJ
+T*[(31:)-600(      endl \(\);)]TJ
+T*[(32:)-600(   })]TJ
+T*[(33:)-600(})]TJ
+(34:)'
+ET
+Q
+Q
+endstream
+endobj
+59 0 obj
+1627
+endobj
+62 0 obj
+<</Length 63 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 277.812 736.5 Tm
+(23-atoi.oc)Tj
+-94.0633 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 23-atoi.oc,v 1.6 2011-10-28 18:23:43-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include "oclib.oh")]TJ
+(4:)'
+T*[(5:)-600(int atoi \(string str\) {)]TJ
+T*[(6:)-600(   assert \(str != null\);)]TJ
+T*[(7:)-600(   bool neg = false;)]TJ
+T*[(8:)-600(   int num = 0;)]TJ
+T*[(9:)-600(   int digit = 0;)]TJ
+-6 -11 Td
+[(10:)-600(   if \(str[0] != '\\0'\) {)]TJ
+T*[(11:)-600(      if \(str[0] == '-'\) {)]TJ
+T*[(12:)-600(         digit = digit + 1;)]TJ
+T*[(13:)-600(         neg = true;)]TJ
+T*[(14:)-600(      })]TJ
+T*[(15:)-600(      bool contin = true;)]TJ
+T*[(16:)-600(      while \(contin\) {)]TJ
+T*[(17:)-600(         if \(str[digit] == '\\0'\) {)]TJ
+T*[(18:)-600(            contin = false;)]TJ
+T*[(19:)-600(         }else {)]TJ
+T*[(20:)-600(            char c = str[digit];)]TJ
+T*[(21:)-600(            digit = digit + 1;)]TJ
+T*[(22:)-600(            if \(c < '0'\) contin = false;)]TJ
+T*[(23:)-600(            else if \(c > '9'\) contin = false;)]TJ
+T*[(24:)-600(            else num = num * 10 + ord c - ord '0';)]TJ
+T*[(25:)-600(         })]TJ
+T*[(26:)-600(      })]TJ
+T*[(27:)-600(      if \(neg\) num = - num;)]TJ
+T*[(28:)-600(   })]TJ
+T*[(29:)-600(   return num;)]TJ
+T*[(30:)-600(})]TJ
+(31:)'
+T*[(32:)-600(int argi = 0;)]TJ
+T*[(33:)-600(string[] argv = getargv \(\);)]TJ
+T*[(34:)-600(while \(argv[argi] != null\) {)]TJ
+T*[(35:)-600(   string arg = argv[argi];)]TJ
+T*[(36:)-600(   puts \(arg\);)]TJ
+T*[(37:)-600(   puts \(" = "\);)]TJ
+T*[(38:)-600(   puts \(atoi \(arg\)\);)]TJ
+T*[(39:)-600(   endl \(\);)]TJ
+T*[(40:)-600(})]TJ
+(41:)'
+ET
+Q
+Q
+endstream
+endobj
+63 0 obj
+2060
+endobj
+66 0 obj
+<</Length 67 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 259.157 736.5 Tm
+(30-fac-fnloop.oc)Tj
+-75.4086 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 30-fac-fnloop.oc,v 1.2 2011-10-20 21:41:55-07 - - $)]TJ
+11 TL
+T*[(2:)-600(//)]TJ
+T*[(3:)-600(// Function uses a loop to compute factorial.)]TJ
+T*[(4:)-600(//)]TJ
+(5:)'
+T*[(6:)-600(#include "oclib.oh")]TJ
+(7:)'
+T*[(8:)-600(int fac \(int n\) {)]TJ
+T*[(9:)-600(   int f = 1;)]TJ
+-6 -11 Td
+[(10:)-600(   while \(n > 1\) {)]TJ
+T*[(11:)-600(      f = f * n;)]TJ
+T*[(12:)-600(      n = n - 1;)]TJ
+T*[(13:)-600(   })]TJ
+T*[(14:)-600(   return f;)]TJ
+T*[(15:)-600(})]TJ
+(16:)'
+T*[(17:)-600(int n = 1;)]TJ
+T*[(18:)-600(while \(n <= 5\) {)]TJ
+T*[(19:)-600(   puti \(fac \(n\)\);)]TJ
+T*[(20:)-600(})]TJ
+(21:)'
+ET
+Q
+Q
+endstream
+endobj
+67 0 obj
+1134
+endobj
+70 0 obj
+<</Length 71 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 261.481 736.5 Tm
+(31-fib-2supn.oc)Tj
+-77.7324 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 31-fib-2supn.oc,v 1.1 2011-10-20 21:31:44-07 - - $)]TJ
+11 TL
+T*[(2:)-600(//)]TJ
+T*[(3:)-600(// Very slow program, computes Fibonacci numbers with O\(2^n\) speed.)]TJ
+T*[(4:)-600(//)]TJ
+(5:)'
+T*[(6:)-600(#include "oclib.oh")]TJ
+(7:)'
+T*[(8:)-600(int fibonacci \(int n\) {)]TJ
+T*[(9:)-600(   if \(n < 2\) return n;)]TJ
+-6 -11 Td
+[(10:)-600(   return fibonacci \(n - 1\) + fibonacci \(n - 2\);)]TJ
+T*[(11:)-600(})]TJ
+(12:)'
+T*[(13:)-600(// Main program.)]TJ
+(14:)'
+T*[(15:)-600(int n = 0;)]TJ
+T*[(16:)-600(while \(n < 10\) {)]TJ
+T*[(17:)-600(   puts \("fibonacci\("\);)]TJ
+T*[(18:)-600(   puti \(n\);)]TJ
+T*[(19:)-600(   puts \(" = "\);)]TJ
+T*[(20:)-600(   puti \(fibonacci \(n\)\);)]TJ
+T*[(21:)-600(   endl \(\);)]TJ
+T*[(22:)-600(})]TJ
+(23:)'
+ET
+Q
+Q
+endstream
+endobj
+71 0 obj
+1276
+endobj
+74 0 obj
+<</Length 75 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 259.396 736.5 Tm
+(40-arraystack.oc)Tj
+-75.6473 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 40-arraystack.oc,v 1.4 2011-10-28 18:24:19-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include "oclib.oh")]TJ
+(4:)'
+T*[(5:)-600(#define EMPTY \(-1\))]TJ
+T*[(6:)-600(struct stack {)]TJ
+T*[(7:)-600(   string[] data;)]TJ
+T*[(8:)-600(   int size;)]TJ
+T*[(9:)-600(   int top;)]TJ
+-6 -11 Td
+[(10:)-600(})]TJ
+(11:)'
+T*[(12:)-600(stack new_stack \(int size\) {)]TJ
+T*[(13:)-600(   stack stack = new stack \(\); // Zeros out both fields.)]TJ
+T*[(14:)-600(   stack.data = new string[size]; // Array of null pointers.)]TJ
+T*[(15:)-600(   stack.size = size;)]TJ
+T*[(16:)-600(   stack.top = EMPTY;)]TJ
+T*[(17:)-600(   return stack;)]TJ
+T*[(18:)-600(})]TJ
+(19:)'
+T*[(20:)-600(void push \(stack stack, string str\) {)]TJ
+T*[(21:)-600(   assert \(stack.top < stack.size - 1\);)]TJ
+T*[(22:)-600(   stack.top = stack.top + 1;)]TJ
+T*[(23:)-600(   stack.data[stack.top] = str;)]TJ
+T*[(24:)-600(})]TJ
+(25:)'
+T*[(26:)-600(string pop \(stack stack\) {)]TJ
+T*[(27:)-600(   assert \(stack.top != EMPTY\);)]TJ
+T*[(28:)-600(   string tmp = stack.data[top];)]TJ
+T*[(29:)-600(   top = top - 1;)]TJ
+T*[(30:)-600(   return tmp;)]TJ
+T*[(31:)-600(})]TJ
+(32:)'
+T*[(33:)-600(bool empty \(stack stack\) {)]TJ
+T*[(34:)-600(   return stack.top == EMPTY;)]TJ
+T*[(35:)-600(})]TJ
+(36:)'
+T*[(37:)-600(// Main program.)]TJ
+T*[(38:)-600(string[] argv = getargv \(\);)]TJ
+T*[(39:)-600(stack stack = new_stack \(\);)]TJ
+(40:)'
+T*[(41:)-600(int argi = 0;)]TJ
+T*[(42:)-600(while \(argv[argi] != null\) {)]TJ
+T*[(43:)-600(   push \(stack, argv[argi]\);)]TJ
+T*[(44:)-600(   argi = argi + 1;)]TJ
+T*[(45:)-600(})]TJ
+(46:)'
+T*[(47:)-600(while \(! empty \(stack\)\) {)]TJ
+T*[(48:)-600(   puts \(pop \(stack\)\);)]TJ
+T*[(49:)-600(   endl \(\);)]TJ
+T*[(50:)-600(})]TJ
+(51:)'
+ET
+Q
+Q
+endstream
+endobj
+75 0 obj
+2249
+endobj
+78 0 obj
+<</Length 79 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 256.427 736.5 Tm
+(41-linkedstack.oc)Tj
+-72.6785 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 41-linkedstack.oc,v 1.4 2011-10-28 18:24:19-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include "oclib.oh")]TJ
+(4:)'
+T*[(5:)-600(struct stack {)]TJ
+T*[(6:)-600(   node top;)]TJ
+T*[(7:)-600(})]TJ
+(8:)'
+T*[(9:)-600(struct node {)]TJ
+-6 -11 Td
+[(10:)-600(   string data;)]TJ
+T*[(11:)-600(   node link;)]TJ
+T*[(12:)-600(})]TJ
+(13:)'
+T*[(14:)-600(stack new_stack \(int size\) {)]TJ
+T*[(15:)-600(   stack stack = new stack \(\);)]TJ
+T*[(16:)-600(   stack.top = null;)]TJ
+T*[(17:)-600(   return stack;)]TJ
+T*[(18:)-600(})]TJ
+(19:)'
+T*[(20:)-600(void push \(stack stack, string str\) {)]TJ
+T*[(21:)-600(   assert \(stack != null\);)]TJ
+T*[(22:)-600(   node tmp = new node \(\);)]TJ
+T*[(23:)-600(   tmp.data = str;)]TJ
+T*[(24:)-600(   tmp.link = stack.top;)]TJ
+T*[(25:)-600(   stack.top = tmp;)]TJ
+T*[(26:)-600(})]TJ
+(27:)'
+T*[(28:)-600(string pop \(stack stack\) {)]TJ
+T*[(29:)-600(   assert \(stack != null\);)]TJ
+T*[(30:)-600(   assert \(! empty \(stack\)\);)]TJ
+T*[(31:)-600(   string tmp = stack.top.data;)]TJ
+T*[(32:)-600(   stack.top = stack.top.link;)]TJ
+T*[(33:)-600(   return tmp;)]TJ
+T*[(34:)-600(})]TJ
+(35:)'
+T*[(36:)-600(bool empty \(stack stack\) {)]TJ
+T*[(37:)-600(   assert \(stack != null\);)]TJ
+T*[(38:)-600(   return stack.top == null;)]TJ
+T*[(39:)-600(})]TJ
+(40:)'
+T*[(41:)-600(// Main program.)]TJ
+(42:)'
+T*[(43:)-600(string[] argv = getargv \(\);)]TJ
+T*[(44:)-600(stack stack = new_stack \(\);)]TJ
+T*[(45:)-600(int argi = 0;)]TJ
+(46:)'
+T*[(47:)-600(while \(argv[argi] != null\) {)]TJ
+T*[(48:)-600(   push \(stack, argv[argi]\);)]TJ
+T*[(49:)-600(   argi = argi + 1;)]TJ
+T*[(50:)-600(})]TJ
+(51:)'
+T*[(52:)-600(while \(! empty \(stack\)\) {)]TJ
+T*[(53:)-600(   puts \(pop \(stack\)\);)]TJ
+T*[(54:)-600(   endl \(\);)]TJ
+T*[(55:)-600(})]TJ
+(56:)'
+ET
+Q
+Q
+endstream
+endobj
+79 0 obj
+2287
+endobj
+82 0 obj
+<</Length 83 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 259.535 736.5 Tm
+(42-viiiqueens.oc)Tj
+-75.7867 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 42-viiiqueens.oc,v 1.3 2011-10-25 18:21:10-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include "oclib.oh")]TJ
+(4:)'
+T*[(5:)-600(#define BOARD_SIZE 8)]TJ
+T*[(6:)-600(int[] board = new int[BOARD_SIZE];)]TJ
+(7:)'
+T*[(8:)-600(bool is_safe \(int newcol\) {)]TJ
+T*[(9:)-600(   int col = 0;)]TJ
+-6 -11 Td
+[(10:)-600(   while \(col < newcol\) {)]TJ
+T*[(11:)-600(      if \(board[col] == board[newcol]\) return false;)]TJ
+T*[(12:)-600(      int diagonal = board[col] - board[newcol];)]TJ
+T*[(13:)-600(      if \(diagonal == col - newcol\) return false;)]TJ
+T*[(14:)-600(      if \(diagonal == newcol - col\) return false;)]TJ
+T*[(15:)-600(      col = col + 1;)]TJ
+T*[(16:)-600(   })]TJ
+T*[(17:)-600(   return true;)]TJ
+T*[(18:)-600(})]TJ
+(19:)'
+T*[(20:)-600(void printqueens \(\) {)]TJ
+T*[(21:)-600(   int col = 0;)]TJ
+T*[(22:)-600(   while \(col < BOARD_SIZE\) {)]TJ
+T*[(23:)-600(      putchar \(chr \(board[col] + ord '1'\)\);)]TJ
+T*[(24:)-600(      col = col + 1;)]TJ
+T*[(25:)-600(   })]TJ
+T*[(26:)-600(   putchar \('\\n'\);)]TJ
+T*[(27:)-600(})]TJ
+(28:)'
+T*[(29:)-600(void queens \(int newcol\) {)]TJ
+T*[(30:)-600(   if \(newcol == BOARD_SIZE\) printqueens \(\);)]TJ
+T*[(31:)-600(   else {)]TJ
+T*[(32:)-600(      int row = 0;)]TJ
+T*[(33:)-600(      while \(row < BOARD_SIZE\) {)]TJ
+T*[(34:)-600(         board[newcol] = row;)]TJ
+T*[(35:)-600(         if \(is_safe \(newcol\)\) queens \(newcol + 1\);)]TJ
+T*[(36:)-600(         row = row + 1;)]TJ
+T*[(37:)-600(      })]TJ
+T*[(38:)-600(   })]TJ
+T*[(39:)-600(})]TJ
+(40:)'
+T*[(41:)-600(// Main program.)]TJ
+T*[(42:)-600(queens \(0\);)]TJ
+(43:)'
+ET
+Q
+Q
+endstream
+endobj
+83 0 obj
+2114
+endobj
+86 0 obj
+<</Length 87 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:20)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 255.573 736.5 Tm
+(44-dot-product.oc)Tj
+-71.8242 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 44-dot-product.oc,v 1.2 2011-09-20 19:23:27-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(int dot_product \(int size, int[] vec1, int[] vec2\) {)]TJ
+T*[(4:)-600(   int index = 0;)]TJ
+T*[(5:)-600(   int dot = 0;)]TJ
+T*[(6:)-600(   while \(index < size\) {)]TJ
+T*[(7:)-600(      dot = dot + vec1[index] * vec2[index];)]TJ
+T*[(8:)-600(      index = index + 1;)]TJ
+T*[(9:)-600(   })]TJ
+-6 -11 Td
+[(10:)-600(   return dot;)]TJ
+T*[(11:)-600(})]TJ
+(12:)'
+T*[(13:)-600(#define SIZE 10)]TJ
+T*[(14:)-600(int[] vec1 = new int[SIZE];)]TJ
+T*[(15:)-600(int[] vec2 = new int[SIZE];)]TJ
+T*[(16:)-600(int i = 0;)]TJ
+T*[(17:)-600(while \(i < SIZE\) {)]TJ
+T*[(18:)-600(   vec1[i] = i + 10;)]TJ
+T*[(19:)-600(   vec2[i] = i * 10;)]TJ
+T*[(20:)-600(})]TJ
+T*[(21:)-600(puti \(dot_product \(SIZE, vec1, fec2\)\);)]TJ
+T*[(22:)-600(endl \(\);)]TJ
+ET
+Q
+Q
+endstream
+endobj
+87 0 obj
+1348
+endobj
+90 0 obj
+<</Length 91 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:20)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 243.527 736.5 Tm
+(45-towers-of-hanoi.oc)Tj
+-59.7781 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 45-towers-of-hanoi.oc,v 1.2 2011-09-20 19:44:21-07 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include "oclib.oh")]TJ
+(4:)'
+T*[(5:)-600(void move \(string src, string dst\) {)]TJ
+T*[(6:)-600(   puts \("Move a disk from "\);)]TJ
+T*[(7:)-600(   puts \(src\);)]TJ
+T*[(8:)-600(   puts \(" to "\);)]TJ
+T*[(9:)-600(   puts \(dst\);)]TJ
+-6 -11 Td
+[(10:)-600(   puts \(".\\n"\);)]TJ
+T*[(11:)-600(})]TJ
+(12:)'
+T*[(13:)-600(void towers \(int ndisks, string src, string tmp, string dst\) {)]TJ
+T*[(14:)-600(   if \(ndisks < 1\) return;)]TJ
+T*[(15:)-600(   towers \(ndisks - 1, src, tmp\);)]TJ
+T*[(16:)-600(   move \(src, dst\);)]TJ
+T*[(17:)-600(   towers \(ndisks - 1, tmp, dst\);)]TJ
+T*[(18:)-600(})]TJ
+(19:)'
+T*[(20:)-600(towers \(4, "Source", "Temporary", "Destination"\);)]TJ
+(21:)'
+ET
+Q
+Q
+endstream
+endobj
+91 0 obj
+1308
+endobj
+94 0 obj
+<</Length 95 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:20)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 253.159 736.5 Tm
+(53-insertionsort.oc)Tj
+-69.4102 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(// $Id: 53-insertionsort.oc,v 1.3 2011-10-28 14:32:36-07 - - $)]TJ
+11 TL
+T*[(2:)-600(//)]TJ
+T*[(3:)-600(// Use insertion sort to print argv in osrted order.)]TJ
+T*[(4:)-600(//)]TJ
+(5:)'
+T*[(6:)-600(#include "oclib.oh")]TJ
+(7:)'
+T*[(8:)-600(int strcmp \(string s1, string s2\) {)]TJ
+T*[(9:)-600(   int index = 0;)]TJ
+-6 -11 Td
+[(10:)-600(   bool contin = true;)]TJ
+T*[(11:)-600(   while \(contin\) {)]TJ
+T*[(12:)-600(      char s1c = s1[index];)]TJ
+T*[(13:)-600(      char s2c = s2[index];)]TJ
+T*[(14:)-600(      int cmp = ord s1c - ord s2c;)]TJ
+T*[(15:)-600(      if \(cmp != 0\) return cmp;)]TJ
+T*[(16:)-600(      if \(s1c == '\\0'\) contin = false;)]TJ
+T*[(17:)-600(      index = index + 1;)]TJ
+T*[(18:)-600(   })]TJ
+T*[(19:)-600(   return 0;)]TJ
+T*[(20:)-600(})]TJ
+(21:)'
+T*[(22:)-600(void insertion_sort \(int size, string[] array\) {)]TJ
+T*[(23:)-600(   int sorted = 1;)]TJ
+T*[(24:)-600(   while \(sorted < size\) {)]TJ
+T*[(25:)-600(      int slot = sorted;)]TJ
+T*[(26:)-600(      string element = array[slot];)]TJ
+T*[(27:)-600(      bool contin = true;)]TJ
+T*[(28:)-600(      while \(contin\) {)]TJ
+T*[(29:)-600(         if \(slot == 0\) {)]TJ
+T*[(30:)-600(            contin = false;)]TJ
+T*[(31:)-600(         }else if \(strcmp \(array[slot - 1], element\) <= 0\) {)]TJ
+T*[(32:)-600(            contin = false;)]TJ
+T*[(33:)-600(         }else {)]TJ
+T*[(34:)-600(            array[slot] = array[slot - 1];)]TJ
+T*[(35:)-600(            slot = slot - 1;)]TJ
+T*[(36:)-600(         })]TJ
+T*[(37:)-600(      })]TJ
+T*[(38:)-600(      array[slot] = element;)]TJ
+T*[(39:)-600(      sorted = sorted + 1;)]TJ
+T*[(40:)-600(   })]TJ
+T*[(41:)-600(})]TJ
+(42:)'
+T*[(43:)-600(void print_array \(string label, int size, string[] array\) {)]TJ
+T*[(44:)-600(   endl \(\);)]TJ
+T*[(45:)-600(   puts \(label\);)]TJ
+T*[(46:)-600(   puts \(":\\n"\);)]TJ
+T*[(47:)-600(   int index = 0;)]TJ
+T*[(48:)-600(   while \(index < size\) {)]TJ
+T*[(49:)-600(      puts \(array[index]\);)]TJ
+T*[(50:)-600(      endl \(\);)]TJ
+T*[(51:)-600(      index = index + 1;)]TJ
+T*[(52:)-600(   })]TJ
+T*[(53:)-600(})]TJ
+(54:)'
+T*[(55:)-600(string[] argv = getargv \(\);)]TJ
+T*[(56:)-600(int argc = 0;)]TJ
+T*[(57:)-600(while \(argv[argc] != null\) argc = argc + 1;)]TJ
+T*[(58:)-600(print_argv \("unsorted", argc, argv\);)]TJ
+T*[(59:)-600(insertion_sort \(argc, argv\);)]TJ
+T*[(60:)-600(print_argv \("sorted", argc, argv\);)]TJ
+(61:)'
+ET
+Q
+Q
+endstream
+endobj
+95 0 obj
+2923
+endobj
+98 0 obj
+<</Length 99 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(09/20/11)Tj
+-0.659766 -12.8004 Td
+(19:23:18)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 278.204 736.5 Tm
+(90-c8q.oc)Tj
+-94.4551 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(char O[9];Q\(l,b,d\){int o=8,p=1,q=1<<)]TJ
+11 TL
+T*[(2:)-600(l|1<<22-l;for\(;l>7?!write\(1,O,9\):o--)]TJ
+T*[(3:)-600(;\)O[l]=56-o,b&p|d&q||Q\(l+1,b|p,d|q\),)]TJ
+T*[(4:)-600(p*=2,q*=2;}main\(\){O[8]=10;Q\(0,0,0\);})]TJ
+ET
+Q
+Q
+endstream
+endobj
+99 0 obj
+739
+endobj
+102 0 obj
+<</Length 103 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(10/28/11)Tj
+-0.659766 -12.8004 Td
+(18:24:20)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 255.258 736.5 Tm
+(92-uncomment.oc)Tj
+-71.5094 18 Td
+($cmps104a-wm/Assignments/oc-programs/)Tj
+/R10 10 Tf
+-115.748 -35.5 Td
+[(1:)-600(/*)]TJ
+11 TL
+T*[(2:)-600(This is an unterminated comment.)]TJ
+T*[(3:)-600(It would cause cpp to error out.)]TJ
+T*[(4:)-600(When cpp returns a non-zero exit code,)]TJ
+T*[(5:)-600(so should your compiler.)]TJ
+T*[(6:)-600($Id: 92-uncomment.oc,v 1.1 2011-09-15 18:50:16-07 - - $)]TJ
+(7:)'
+T*[(8:)-600(int main \(int argc, char **argv\) {)]TJ
+ET
+Q
+Q
+endstream
+endobj
+103 0 obj
+865
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+25 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 28 0 R
+>>
+/Contents 26 0 R
+>>
+endobj
+29 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 32 0 R
+>>
+/Contents 30 0 R
+>>
+endobj
+33 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 36 0 R
+>>
+/Contents 34 0 R
+>>
+endobj
+37 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 40 0 R
+>>
+/Contents 38 0 R
+>>
+endobj
+41 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 44 0 R
+>>
+/Contents 42 0 R
+>>
+endobj
+45 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 48 0 R
+>>
+/Contents 46 0 R
+>>
+endobj
+49 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 52 0 R
+>>
+/Contents 50 0 R
+>>
+endobj
+53 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 56 0 R
+>>
+/Contents 54 0 R
+>>
+endobj
+57 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 60 0 R
+>>
+/Contents 58 0 R
+>>
+endobj
+61 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 64 0 R
+>>
+/Contents 62 0 R
+>>
+endobj
+65 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 68 0 R
+>>
+/Contents 66 0 R
+>>
+endobj
+69 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 72 0 R
+>>
+/Contents 70 0 R
+>>
+endobj
+73 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 76 0 R
+>>
+/Contents 74 0 R
+>>
+endobj
+77 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 80 0 R
+>>
+/Contents 78 0 R
+>>
+endobj
+81 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 84 0 R
+>>
+/Contents 82 0 R
+>>
+endobj
+85 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 88 0 R
+>>
+/Contents 86 0 R
+>>
+endobj
+89 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 92 0 R
+>>
+/Contents 90 0 R
+>>
+endobj
+93 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 96 0 R
+>>
+/Contents 94 0 R
+>>
+endobj
+97 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 100 0 R
+>>
+/Contents 98 0 R
+>>
+endobj
+101 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 104 0 R
+>>
+/Contents 102 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+25 0 R
+29 0 R
+33 0 R
+37 0 R
+41 0 R
+45 0 R
+49 0 R
+53 0 R
+57 0 R
+61 0 R
+65 0 R
+69 0 R
+73 0 R
+77 0 R
+81 0 R
+85 0 R
+89 0 R
+93 0 R
+97 0 R
+101 0 R
+] /Count 24
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+28 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+32 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+36 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+40 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+44 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+48 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+52 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+56 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+60 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+64 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+68 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+72 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+76 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+80 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+84 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+88 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+92 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+96 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+100 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+104 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20111028191821)
+/ModDate(D:20111028191821)>>endobj
+xref
+0 105
+0000000000 65535 f 
+0000037087 00000 n 
+0000038895 00000 n 
+0000036865 00000 n 
+0000033623 00000 n 
+0000000009 00000 n 
+0000001417 00000 n 
+0000038693 00000 n 
+0000038564 00000 n 
+0000038762 00000 n 
+0000038630 00000 n 
+0000038827 00000 n 
+0000037135 00000 n 
+0000033756 00000 n 
+0000001437 00000 n 
+0000002198 00000 n 
+0000037205 00000 n 
+0000033891 00000 n 
+0000002218 00000 n 
+0000002998 00000 n 
+0000037264 00000 n 
+0000034026 00000 n 
+0000003018 00000 n 
+0000003842 00000 n 
+0000037323 00000 n 
+0000034161 00000 n 
+0000003862 00000 n 
+0000004897 00000 n 
+0000037382 00000 n 
+0000034296 00000 n 
+0000004917 00000 n 
+0000005801 00000 n 
+0000037441 00000 n 
+0000034431 00000 n 
+0000005821 00000 n 
+0000006806 00000 n 
+0000037500 00000 n 
+0000034566 00000 n 
+0000006826 00000 n 
+0000008394 00000 n 
+0000037559 00000 n 
+0000034701 00000 n 
+0000008415 00000 n 
+0000009309 00000 n 
+0000037618 00000 n 
+0000034836 00000 n 
+0000009329 00000 n 
+0000010309 00000 n 
+0000037677 00000 n 
+0000034971 00000 n 
+0000010329 00000 n 
+0000011224 00000 n 
+0000037736 00000 n 
+0000035106 00000 n 
+0000011244 00000 n 
+0000012795 00000 n 
+0000037795 00000 n 
+0000035241 00000 n 
+0000012816 00000 n 
+0000014495 00000 n 
+0000037854 00000 n 
+0000035376 00000 n 
+0000014516 00000 n 
+0000016628 00000 n 
+0000037913 00000 n 
+0000035511 00000 n 
+0000016649 00000 n 
+0000017835 00000 n 
+0000037972 00000 n 
+0000035646 00000 n 
+0000017856 00000 n 
+0000019184 00000 n 
+0000038031 00000 n 
+0000035781 00000 n 
+0000019205 00000 n 
+0000021506 00000 n 
+0000038090 00000 n 
+0000035916 00000 n 
+0000021527 00000 n 
+0000023866 00000 n 
+0000038149 00000 n 
+0000036051 00000 n 
+0000023887 00000 n 
+0000026053 00000 n 
+0000038208 00000 n 
+0000036186 00000 n 
+0000026074 00000 n 
+0000027474 00000 n 
+0000038267 00000 n 
+0000036321 00000 n 
+0000027495 00000 n 
+0000028855 00000 n 
+0000038326 00000 n 
+0000036456 00000 n 
+0000028876 00000 n 
+0000031851 00000 n 
+0000038385 00000 n 
+0000036591 00000 n 
+0000031872 00000 n 
+0000032663 00000 n 
+0000038444 00000 n 
+0000036727 00000 n 
+0000032683 00000 n 
+0000033602 00000 n 
+0000038504 00000 n 
+trailer
+<< /Size 105 /Root 1 0 R /Info 2 0 R
+/ID [<2B774C51EE72FDE31240DF58D48E0F63><2B774C51EE72FDE31240DF58D48E0F63>]
+>>
+startxref
+39006
+%%EOF
+@

@@ -1,0 +1,959 @@
+head	1.33;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.33
+date	2016.11.30.22.45.59;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2016.11.03.22.06.12;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2016.09.22.00.31.28;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2014.11.22.00.46.15;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2014.11.13.00.35.41;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2014.11.11.19.47.53;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2014.11.11.19.34.19;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2014.11.11.19.30.59;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2014.11.07.03.26.42;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2011.11.19.01.34.29;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2011.11.19.01.33.23;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2011.11.19.01.27.10;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2011.11.19.01.14.45;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2011.11.18.05.56.33;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2011.11.18.05.55.54;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2011.11.18.05.55.00;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2011.11.18.05.32.13;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2011.11.18.05.24.49;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2011.11.18.04.48.27;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2011.11.18.04.42.29;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2011.11.18.04.39.04;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2011.11.17.03.49.28;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2011.11.16.23.10.20;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2011.11.09.02.00.03;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2011.11.07.20.09.34;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2011.10.28.21.34.12;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2011.10.26.01.15.52;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2011.10.04.03.31.28;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2011.09.26.21.22.22;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2011.09.24.02.42.35;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2011.09.21.23.47.06;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.09.21.02.23.27;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.09.16.01.50.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.33
+log
+@-
+@
+text
+@// $Id: oclib.oh,v 1.32 2016-11-03 15:06:12-07 - - $
+
+#ifndef __OCLIB_OH__
+#define __OCLIB_OH__
+
+#ifdef __OCLIB_C__
+void* xcalloc (int nelem, int size);
+void __putb (char __b);
+void __putc (char __c);
+void __puti (int __i);
+void __puts (char* __s);
+void __endl (void);
+int __getc (void);
+char* __getw (void);
+char* __getln (void);
+char** __getargv (void);
+void __exit (int status);
+void ____assert_fail (char* expr, char* file, int line);
+
+#else
+#define EOF (-1)
+#define char int
+#define bool int
+#define true 1
+#define false 0
+#define assert(expr) \
+        {if (!(expr)) __assert_fail (#expr, __FILE__, __LINE__);}
+void __assert_fail (string expr, string file, int line);
+void putb (int b);
+void putc (char c);
+void puti (int i);
+void puts (string s);
+void endl ();
+int getc ();
+string getw ();
+string getln ();
+string[] getargv ();
+void exit (int status);
+
+#endif
+#endif
+
+@
+
+
+1.32
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.31 2016-09-21 17:31:28-07 - - $
+d18 1
+d29 1
+a29 1
+void putb (bool b);
+@
+
+
+1.31
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.30 2014-11-21 16:46:15-08 - - $
+d21 1
+@
+
+
+1.30
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.29 2014-11-12 16:35:41-08 - - $
+d21 3
+@
+
+
+1.29
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.28 2014-11-11 11:47:53-08 - - $
+a6 1
+typedef unsigned char ubyte;
+d8 2
+a9 2
+void __putb (ubyte __b);
+void __putc (ubyte __c);
+d11 1
+a11 1
+void __puts (ubyte* __s);
+d14 3
+a16 3
+ubyte* __getw (void);
+ubyte* __getln (void);
+ubyte** __getargv (void);
+@
+
+
+1.28
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.27 2014-11-11 11:34:19-08 - - $
+a6 1
+
+a20 1
+
+a36 1
+
+@
+
+
+1.27
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.26 2014-11-11 11:30:59-08 - - $
+a7 3
+#define null  0
+#define false 0
+#define true  1
+a9 1
+
+a19 3
+#define assert(expr) { \
+        if (!(expr)) ____assert_fail (#expr, __FILE__, __LINE__); \
+        }
+d23 3
+a25 1
+#   define EOF            (-1)
+a26 1
+
+a36 3
+#define assert(expr) { \
+        if (!(expr)) __assert_fail (#expr, __FILE__, __LINE__); \
+        }
+@
+
+
+1.26
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.25 2014-11-06 19:26:42-08 - - $
+d12 1
+a12 1
+void *xcalloc (int nelem, int size);
+d17 1
+a17 1
+void __puts (ubyte *__s);
+d20 3
+a22 3
+ubyte *__getw (void);
+ubyte *__getln (void);
+ubyte **__getargv (void);
+d44 1
+a44 1
+        if (!(expr)) ____assert_fail (#expr, __FILE__, __LINE__); \
+@
+
+
+1.25
+log
+@-
+@
+text
+@d1 2
+a2 1
+// $Id: oclib.oh,v 1.24 2011-11-18 17:34:29-08 - - $
+d7 4
+a10 11
+#   define __(ID)         __##ID
+#   define NONE__         void
+#   define VOID__(ID)     void __##ID
+#   define BOOL__(ID)     ubyte __##ID
+#   define CHAR__(ID)     ubyte __##ID
+#   define INT__(ID)      int __##ID
+#   define STRING__(ID)   ubyte *__##ID
+#   define STRINGS__(ID)  ubyte **__##ID
+#   define null           0
+#   define false          0
+#   define true           1
+d13 15
+d29 1
+d31 16
+a46 9
+#   define __(ID)         ID
+#   define NONE__
+#   define VOID__(ID)     void ID
+#   define BOOL__(ID)     bool ID
+#   define CHAR__(ID)     char ID
+#   define INT__(ID)      int ID
+#   define STRING__(ID)   string ID
+#   define STRINGS__(ID)  string[] ID
+VOID__(__assert_fail) (STRING__(expr), STRING__(file), INT__(line));
+d49 1
+a49 12
+VOID__(putb) (BOOL__(b));
+VOID__(putc) (CHAR__(c));
+VOID__(puti) (INT__(i));
+VOID__(puts) (STRING__(s));
+VOID__(endl) (NONE__);
+INT__(getc) (NONE__);
+STRING__(getw) (NONE__);
+STRING__(getln) (NONE__);
+STRINGS__ (getargv) (NONE__);
+VOID__(exit) (int status);
+#define assert(expr) \
+        {if (! (expr)) __(__assert_fail) (#expr, __FILE__, __LINE__);}
+a50 1
+#endif
+@
+
+
+1.24
+log
+@-
+@
+text
+@d1 1
+a1 2
+// $Id: oclib.oh,v 1.23 2011-11-18 17:33:23-08 - - $
+
+a45 1
+
+@
+
+
+1.23
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.22 2011-11-18 17:27:10-08 - - $
+a31 2
+#define assert(expr) \
+        {if (! (expr)) __(__assert_fail) (#expr, __FILE__, __LINE__);}
+d43 2
+@
+
+
+1.22
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.21 2011-11-18 17:14:45-08 - - $
+d32 2
+a45 3
+#define assert(expr) \
+        {if (! (expr)) __(__assert_fail) (#expr, __FILE__, __LINE__);}
+
+@
+
+
+1.21
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.20 2011-11-17 21:56:33-08 - - $
+a6 1
+    typedef unsigned char ubyte;
+a8 1
+#   define ubyte          unsigned char
+d14 1
+a14 1
+#   define STRING__S(ID)  ubyte **__##ID
+d18 2
+a19 1
+    void *xcalloc (int nelem, int size);
+d29 2
+a30 3
+#   define STRING__S(ID)  string[] ID
+    VOID__ (__assert_fail) \
+           (STRING__ (expr), STRING__ (file), INT__ (line));
+d33 10
+a42 10
+VOID__ (putb) (BOOL__ (b));
+VOID__ (putc) (CHAR__ (c));
+VOID__ (puti) (INT__ (i));
+VOID__ (puts) (STRING__ (s));
+VOID__ (endl) (NONE__);
+INT__ (getc) (NONE__);
+STRING__ (getw) (NONE__);
+STRING__ (getln) (NONE__);
+STRING__S (getargv) (NONE__);
+VOID__ (exit) (int status);
+@
+
+
+1.20
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.19 2011-11-17 21:55:54-08 - - $
+d7 14
+a20 12
+#   define __(ID)          __##ID
+#   define __NONE__        void
+#   define ubyte           unsigned char
+#   define __VOID__(ID)    void __##ID
+#   define __BOOL__(ID)    ubyte __##ID
+#   define __CHAR__(ID)    ubyte __##ID
+#   define __INT__(ID)     int __##ID
+#   define __STRING__(ID)  ubyte *__##ID
+#   define __STRING__S(ID) ubyte **__##ID
+#   define null            0
+#   define false           0
+#   define true            1
+d22 11
+a32 9
+#   define EOF             (-1)
+#   define __(ID)          ID
+#   define __NONE__
+#   define __VOID__(ID)    void ID
+#   define __BOOL__(ID)    bool ID
+#   define __CHAR__(ID)    char ID
+#   define __INT__(ID)     int ID
+#   define __STRING__(ID)  string ID
+#   define __STRING__S(ID) string[] ID
+d35 11
+a45 15
+__VOID__ (putb) (__BOOL__ (b));
+__VOID__ (putc) (__CHAR__ (c));
+__VOID__ (puti) (__INT__ (i));
+__VOID__ (puts) (__STRING__ (s));
+__VOID__ (endl) (__NONE__);
+__INT__ (getc) (__NONE__);
+__STRING__ (getw) (__NONE__);
+__STRING__ (getln) (__NONE__);
+__STRING__S (getargv) (__NONE__);
+__VOID__ (exit) (int status);
+
+#ifndef __OCLIB_C__
+__VOID__ (__assert_fail) (__STRING__ (expr), __STRING__ (file),
+                          __INT__ (line));
+#endif
+@
+
+
+1.19
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.18 2011-11-17 21:55:00-08 - - $
+d43 1
+a43 1
+__VOID__ (__assert_fail) (__STRING__ (expr), __STRING (file),
+@
+
+
+1.18
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.17 2011-11-17 21:32:13-08 - - $
+d23 2
+a24 2
+#   define __VOID__(ID)    void id
+#   define __BOOL__(id)    bool ID
+@
+
+
+1.17
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.16 2011-11-17 21:24:49-08 - - $
+d24 1
+a24 1
+#   define __bool__(id)    bool ID
+@
+
+
+1.16
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.15 2011-11-17 20:48:27-08 - - $
+d8 1
+a8 1
+#   define __EMPTY         void
+d10 1
+a10 1
+#   define __VOID(ID)      void __##ID
+d13 1
+a13 1
+#   define __INT(ID)       int __##ID
+d22 2
+a23 2
+#   define __EMPTY
+#   define __VOID(ID)      void id
+d26 1
+a26 1
+#   define __INT(ID)       int ID
+d31 10
+a40 11
+
+__VOID (putb) (__BOOL__ (b));
+__VOID (putc) (__CHAR__ (c));
+__VOID (puti) (int i);
+__VOID (puts) (__STRING__ (s));
+__VOID (endl) (__EMPTY);
+__INT (getc) (__EMPTY);
+__STRING__ (getw) (__EMPTY);
+__STRING__ (getln) (__EMPTY);
+__STRING__S (getargv) (__EMPTY);
+__VOID (exit) (int status);
+d43 2
+a44 1
+__VOID (__assert_fail) (__STRING__ (expr), __STRING (file), int line);
+@
+
+
+1.15
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.14 2011-11-17 20:42:29-08 - - $
+d6 1
+a6 1
+#ifdef __OCLIB_C_NAMES__
+d20 1
+a30 1
+#define EOF (-1)
+a36 1
+
+a40 1
+
+d43 1
+a43 1
+#ifndef __OCLIB_C_NAMES__
+@
+
+
+1.14
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.13 2011-11-17 20:39:04-08 - - $
+d7 12
+a18 12
+#   define __(ID)        __##ID
+#   define __EMPTY       void
+#   define ubyte         unsigned char
+#   define __VOID(ID)    void __##ID
+#   define __BOOL(ID)    ubyte __##ID
+#   define __CHAR(ID)    ubyte __##ID
+#   define __INT(ID)     int __##ID
+#   define __STRING(ID)  ubyte *__##ID
+#   define __STRINGS(ID) ubyte **__##ID
+#   define null          0
+#   define false         0
+#   define true          1
+d20 1
+a20 1
+#   define __(ID)        ID
+d22 6
+a27 6
+#   define __VOID(ID)    void ID
+#   define __BOOL(ID)    bool ID
+#   define __CHAR(ID)    char ID
+#   define __INT(ID)     int ID
+#   define __STRING(ID)  string ID
+#   define __STRINGS(ID) string[] ID
+d32 4
+a35 4
+__VOID (putb) (__BOOL (b));
+__VOID (putc) (__CHAR (c));
+__VOID (puti) (int (i));
+__VOID (puts) (__STRING (s));
+d39 3
+a41 3
+__STRING (getw) (__EMPTY);
+__STRING (getln) (__EMPTY);
+__STRINGS (getargv) (__EMPTY);
+d46 1
+a46 1
+__VOID (__assert_fail) (__STRING (expr), __STRING (file), int line);
+@
+
+
+1.13
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.12 2011/11/17 03:49:28 - - $
+d7 12
+a18 11
+#   define __(ID)   __##ID
+#   define ubyte       unsigned char
+#   define VOID(ID)    void __##ID
+#   define BOOL(ID)    ubyte __##ID
+#   define CHAR(ID)    ubyte __##ID
+#   define INT(ID)     int __##ID
+#   define STRING(ID)  ubyte *__##ID
+#   define STRINGS(ID) ubyte **__##ID
+#   define null        0
+#   define false       0
+#   define true        1
+d20 8
+a27 7
+#   define __(ID)      ID
+#   define VOID(ID)    void ID
+#   define BOOL(ID)    bool ID
+#   define CHAR(ID)    char ID
+#   define INT(ID)     int ID
+#   define STRING(ID)  string ID
+#   define STRINGS(ID) string[] ID
+d32 10
+a41 10
+VOID (putb) (BOOL (b));
+VOID (putc) (CHAR (c));
+VOID (puti) (int (i));
+VOID (puts) (STRING (s));
+VOID (endl) ();
+
+INT (getc) ();
+STRING (getw) ();
+STRING (getln) ();
+STRINGS (getargv) ();
+d43 1
+a43 1
+VOID (exit) (int status);
+d46 1
+a46 1
+VOID (__assert_fail) (STRING (expr), STRING (file), int line);
+@
+
+
+1.12
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.11 2011-11-16 15:10:20-08 - - $
+d6 22
+d30 10
+a39 10
+void putb (bool b);
+void putc (char c);
+void puti (int i);
+void puts (string s);
+void endl ();
+
+int getc ();
+string getw ();
+string getln ();
+string[] getargv ();
+d41 1
+a41 1
+void exit (int status);
+d43 3
+a45 1
+void __assert_fail (string expr, string file, int line);
+d47 1
+a47 1
+        {if (! (expr)) __assert_fail (#expr, __FILE__, __LINE__);}
+@
+
+
+1.11
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.10 2011-11-08 18:00:03-08 - - $
+a13 1
+int atoi (string s);
+@
+
+
+1.10
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.9 2011-11-07 12:09:34-08 - - $
+d14 1
+d18 1
+a18 1
+string[] oc_argv ();
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.7 2011/10/26 01:15:52 - - $
+d17 1
+a17 1
+string[] getargv ();
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.7 2011-10-25 18:15:52-07 - - $
+a6 1
+#define endl() putc('\n')
+d12 1
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.6 2011-10-03 20:31:28-07 - - $
+d7 1
+a12 1
+void endl ();
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.5 2011-09-26 14:22:22-07 - - $
+a7 3
+char chr (int i);
+int ord (char c);
+
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.4 2011-09-23 19:42:35-07 - - $
+a6 1
+#define string char[]
+a15 1
+void printf (string s, ...);
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.3 2011-09-21 16:47:06-07 - - $
+a8 3
+extern int oc_argc;
+extern string[] oc_argv;
+
+d22 1
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.2 2011-09-20 19:23:27-07 - - $
+d20 1
+d26 1
+a26 1
+void stop (int status);
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.1 2011-09-15 18:50:16-07 - - $
+d27 1
+a27 1
+void assertion_failed (string expr, string file, int line);
+d29 1
+a29 1
+        {if (! (expr)) assertion_failed (#expr, __FILE__, __LINE__);}
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: oclib.oh,v 1.2 2011-09-15 18:45:15-07 - - $
+d7 4
+a25 1
+string[] argv ();
+d29 1
+a29 1
+        {if (! expr) assertion_failed (#expr, __FILE__, __LINE__);}
+@

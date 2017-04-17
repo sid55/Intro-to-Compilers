@@ -1,0 +1,5 @@
+cpp: error: nosuch.oc: No such file or directory
+cpp: warning: ‘-x c’ after last input file has no effect
+cpp: fatal error: no input files
+compilation terminated.
+/usr/bin/cpp -nostdinc nosuch.oc: status 0x0400, exit 4

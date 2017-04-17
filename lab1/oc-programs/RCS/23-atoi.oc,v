@@ -1,0 +1,240 @@
+head	1.10;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.10
+date	2016.11.30.22.43.00;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2016.10.26.21.34.06;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2016.06.02.23.01.09;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2012.12.03.21.21.36;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2011.10.29.01.23.43;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2011.10.28.21.32.36;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2011.09.26.21.22.22;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2011.09.21.02.23.27;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.09.19.21.24.03;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.09.16.03.46.31;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.10
+log
+@-
+@
+text
+@// $Id: 23-atoi.oc,v 1.9 2016-10-26 14:34:06-07 - - $
+
+#include "oclib.oh"
+
+int atoi (string str) {
+   assert (str != null);
+   bool neg = false;
+   int num = 0;
+   int digit = 0;
+   if (str[0] != '\0') {
+      if (str[0] == '-') {
+         digit = digit + 1;
+         neg = true;
+      }
+      bool contin = true;
+      while (contin) {
+         if (str[digit] == '\0') {
+            contin = false;
+         }else {
+            char c = str[digit];
+            digit = digit + 1;
+            if (c < '0') contin = false;
+            else if (c > '9') contin = false;
+            else num = num * 10 + c - '0';
+         }
+      }
+      if (neg) num = - num;
+   }
+   return num;
+}
+
+int argi = 1;
+string[] argv = getargv ();
+while (argv[argi] != null) {
+   string arg = argv[argi];
+   puts (arg);
+   puts (" = ");
+   puti (atoi (arg));
+   endl ();
+   argi = argi + 1;
+}
+
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 23-atoi.oc,v 1.8 2016-06-02 16:01:09-07 - - $
+d40 1
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 23-atoi.oc,v 1.7 2012-12-03 13:21:36-08 - - $
+d24 1
+a24 1
+            else num = num * 10 + ord c - ord '0';
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 23-atoi.oc,v 1.6 2011-10-28 18:23:43-07 - - $
+d32 1
+a32 1
+int argi = 0;
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 23-atoi.oc,v 1.5 2011-10-28 14:32:36-07 - - $
+d38 1
+a38 1
+   puts (atoi (arg));
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 23-atoi.oc,v 1.4 2011-09-26 14:22:22-07 - - $
+d26 1
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 23-atoi.oc,v 1.3 2011-09-20 19:23:27-07 - - $
+d24 1
+a24 1
+            else num = num * 10 + ord (c) - ord ('0');
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 23-atoi.oc,v 1.2 2011-09-19 14:24:03-07 - - $
+d32 3
+a34 2
+while (argi < oc_argc) {
+   string arg = oc_argv[argi];
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 23-atoi.oc,v 1.1 2011-09-15 20:46:31-07 - - $
+d6 1
+d10 1
+a10 1
+   if (str.size > 0) {
+d17 1
+a17 1
+         if (digit == str.size) {
+a30 1
+string[] oc_argv = argv ();
+d32 1
+a32 1
+while (argi < oc_argv.size) {
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 13-atoi.oc,v 1.1 2011-09-15 18:50:16-07 - - $
+d25 1
+@

@@ -1,0 +1,117 @@
+head	1.4;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.4
+date	2016.11.30.22.42.43;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2016.06.02.23.00.42;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.09.19.21.25.40;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.09.16.01.50.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@-
+@
+text
+@// $Id: 21-eratosthenes.oc,v 1.3 2016-06-02 16:00:42-07 - - $
+
+#include "oclib.oh"
+#define SIZE 100
+#define LOWPRIME 2
+
+bool[] sieve = new bool[SIZE];
+int index = LOWPRIME;
+
+while (index < SIZE) {
+   sieve[index] = true;
+   index = index + 1;
+}
+
+int prime = LOWPRIME;
+while (prime < SIZE) {
+   if (sieve[prime]) {
+      index = prime * 2;
+      while (index < SIZE) {
+         sieve[index] = false;
+         index = index + prime;
+      }
+   }
+   prime = prime + 1;
+}
+
+index = LOWPRIME;
+while (index < SIZE) {
+   if (sieve[index]) {
+      puti (index);
+      endl ();
+   }
+   index = index + 1;
+}
+
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 21-eratosthenes.oc,v 1.2 2011-09-19 14:25:40-07 - - $
+a31 1
+      index = index + 1;
+d33 1
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 21-eratosthenes.oc,v 1.1 2011-09-15 18:50:16-07 - - $
+d32 1
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 21-eratosthenes.oc,v 1.1 2011-09-15 18:45:15-07 - - $
+d17 6
+a22 4
+   index = prime * 2;
+   while (index < SIZE) {
+      sieve[index] = false;
+      index = index + prime;
+d24 1
+@

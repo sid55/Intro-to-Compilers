@@ -1,0 +1,3 @@
+cppstrtok.o: cppstrtok.cpp string_set.h auxlib.h
+auxlib.o: auxlib.cpp auxlib.h
+string_set.o: string_set.cpp string_set.h

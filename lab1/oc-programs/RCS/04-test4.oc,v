@@ -1,0 +1,41 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2011.09.16.01.50.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@// $Id: 04-test4.oc,v 1.1 2011-09-15 15:30:10-07 - - $
+
+#include "oclib.oh"
+
+struct foo {
+   int a;
+}
+
+int a = 6;
+foo b = new foo ();
+b.a = 8;
+a = a * b.a + 6;;
+
+puti (a);
+putc (' ');
+puti (b.a);
+endl ();
+
+@

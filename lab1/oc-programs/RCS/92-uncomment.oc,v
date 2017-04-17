@@ -1,0 +1,31 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2011.09.16.01.50.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@/*
+This is an unterminated comment.
+It would cause cpp to error out.
+When cpp returns a non-zero exit code,
+so should your compiler.
+$Id: 92-uncomment.oc,v 1.1 2011-09-15 15:30:10-07 - - $
+
+int main (int argc, char **argv) {
+@

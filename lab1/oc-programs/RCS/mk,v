@@ -1,0 +1,125 @@
+head	1.6;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.6
+date	2016.05.11.22.03.40;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2014.10.23.22.07.55;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2011.11.19.03.13.16;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2011.11.17.03.50.43;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.11.17.03.49.50;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.11.17.03.49.28;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@-
+@
+text
+@#!/bin/sh
+# $Id: mk,v 1.5 2014-10-23 15:07:55-07 - - $
+cid + $0 *.oh *.c *.oc
+cpp -D__OCLIB_C__ oclib.oh >/tmp/cpp-oclib.oh-Cversion
+cpp  oclib.oh >/tmp/cpp-oclib.oh-OCversion
+killps ghostview gs gv
+mkpspdf Listing-oclib.ps oclib.oh i\
+        /tmp/cpp-oclib.oh-Cversion /tmp/cpp-oclib.oh-OCversion oclib.c
+@
+
+
+1.5
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk,v 1.4 2011-11-18 19:13:16-08 - - $
+d4 2
+a5 1
+mkc -c *.c
+d7 2
+a8 1
+mkpspdf Listing-oc.ps *.oh *.c *.oc
+@
+
+
+1.4
+log
+@-
+@
+text
+@d2 2
+a3 2
+# $Id: mk,v 1.3 2011-11-16 19:50:43-08 - - $
+cid + $0 *.oh *.oc *.c
+d6 1
+a6 1
+mkpspdf Listing-oc.ps *.oh *.oc
+@
+
+
+1.3
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk,v 1.2 2011-11-16 19:49:50-08 - - $
+a6 1
+mkpspdf Listing-lib.ps *.oh *.c
+@
+
+
+1.2
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk,v 1.1 2011-11-16 19:49:28-08 - - $
+d5 1
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id$
+d4 1
+@

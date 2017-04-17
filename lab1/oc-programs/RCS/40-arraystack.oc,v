@@ -1,0 +1,207 @@
+head	1.6;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.6
+date	2012.12.03.21.23.28;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2012.12.03.21.22.41;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2011.10.29.01.24.19;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2011.09.26.21.22.22;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.09.21.02.23.27;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2011.09.16.01.50.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@-
+@
+text
+@// $Id: 40-arraystack.oc,v 1.5 2012-12-03 13:22:41-08 - - $
+
+#include "oclib.oh"
+
+#define EMPTY (-1)
+
+struct stack {
+   string[] data;
+   int size;
+   int top;
+}
+
+stack new_stack (int size) {
+   stack stack = new stack (); // Zeros out both fields.
+   stack.data = new string[size]; // Array of null pointers.
+   stack.size = size;
+   stack.top = EMPTY;
+   return stack;
+}
+
+void push (stack stack, string str) {
+   assert (stack.top < stack.size - 1);
+   stack.top = stack.top + 1;
+   stack.data[stack.top] = str;
+}
+
+string pop (stack stack) {
+   assert (stack.top != EMPTY);
+   string tmp = stack.data[stack.top];
+   stack.top = stack.top - 1;
+   return tmp;
+}
+
+bool empty (stack stack) {
+   return stack.top == EMPTY;
+}
+
+// Main program.
+string[] argv = getargv ();
+stack stack = new_stack (100);
+
+int argi = 0;
+while (argv[argi] != null) {
+   push (stack, argv[argi]);
+   argi = argi + 1;
+}
+
+while (! empty (stack)) {
+   puts (pop (stack));
+   endl ();
+}
+
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 40-arraystack.oc,v 1.4 2011-10-28 18:24:19-07 - - $
+d40 1
+a40 1
+stack stack = new_stack ();
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 40-arraystack.oc,v 1.3 2011-09-26 14:22:22-07 - - $
+d6 1
+d29 2
+a30 2
+   string tmp = stack.data[top];
+   top = top - 1;
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 40-arraystack.oc,v 1.2 2011-09-20 19:23:27-07 - - $
+d47 1
+a47 1
+while (! empty (stack) {
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 40-arraystack.oc,v 1.1 2011-09-15 18:50:16-07 - - $
+d38 1
+a38 1
+string[] oc_argv = argv ();
+d42 2
+a43 2
+while (argi < oc_argc) {
+   push (stack, oc_argv[argi]);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: 40-arraystack.oc,v 1.2 2011-09-15 18:45:15-07 - - $
+d8 1
+d13 16
+a28 15
+   stack stack_ = new stack (); // Zeros out both fields.
+   stack_.data = new string[size]; // Array of null pointers.
+   stack_.top = EMPTY;
+   return stack_;
+}
+
+void push (stack stack_, string str) {
+   assert (stack_.top < stack_.size - 1);
+   stack_.top = stack_.top + 1;
+   stack_.data[stack_.top] = str;
+}
+
+string pop (stack stack_) {
+   assert (stack_.top != EMPTY);
+   string tmp = stack_.data[top];
+d33 2
+a34 2
+bool empty (stack stack_) {
+   return stack_.top == EMPTY;
+d39 2
+a40 1
+stack stack_ = new_stack ();
+d42 2
+a43 3
+
+while (argi < oc_argv.size) {
+   push (stack_, oc_argv[argi]);
+d47 2
+a48 2
+while (! empty (stack_) {
+   puts (pop (stack_));
+@

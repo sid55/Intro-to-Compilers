@@ -1,0 +1,32 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2011.11.02.05.02.19;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@// $Id$
+k
+int f() {
+int a = ;
+return foo;
+public static void main (String[] args) {
+   System.exit (255);
+}
+
+@

@@ -1,0 +1,212 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@// @;
+
+
+1.1
+date	2017.04.17.21.54.52;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@// $Id: cppstrtok.cpp,v 1.7 2016-09-30 11:45:04-07 - - $
+
+// Use cpp to scan a file and print line numbers.
+// Print out each input line read in, then strtok it for
+// tokens.
+
+#include <errno.h>
+#include <libgen.h>
+#include <stdlib.h>
+#include <string.h>
+#include <wait.h>
+#include <iostream>
+#include <sys/stat.h>
+#include <unistd.h>
+
+#include "string_set.h"
+#include "auxlib.h"
+
+const string CPP = "/usr/bin/cpp -nostdinc";
+//constexpr size_t LINESIZE = 1024;
+int LINESIZE = 1024;
+
+// Chomp the last character from a buffer if it is delim.
+void chomp (char* string, char delim) {
+   size_t len = strlen (string);
+   if (len == 0) return;
+   char* nlpos = string + len - 1;
+   if (*nlpos == delim) *nlpos = '\0';
+   DEBUGF('x', "Successfully makes last char null string\n");
+}
+
+/*
+static void eprint_signal (const char* kind, int signal) {
+   fprintf (stderr, ", %s %d", kind, signal);
+   const char* sigstr = strsignal (signal);
+   if (sigstr != NULL) fprintf (stderr, " %s", sigstr);
+}
+
+// Print the status returned from a subprocess.
+void eprint_status (const char* command, int status) {
+   if (status == 0) return; 
+   fprintf (stderr, "%s: status 0x%04X", command, status);
+   if (WIFEXITED (status)) {
+      fprintf (stderr, ", exit %d", WEXITSTATUS (status));
+   }
+   if (WIFSIGNALED (status)) {
+      eprint_signal ("Terminated", WTERMSIG (status));
+      #ifdef WCOREDUMP
+      if (WCOREDUMP (status)) fprintf (stderr, ", core dumped");
+      #endif
+   }
+   if (WIFSTOPPED (status)) {
+      eprint_signal ("Stopped", WSTOPSIG (status));
+   }
+   if (WIFCONTINUED (status)) {
+      fprintf (stderr, ", Continued");
+   }
+   fprintf (stderr, "\n");
+}
+*/
+
+//check if file exists or not
+bool fileExists(const std::string& filename)
+{
+   DEBUGF('x', "Check if filename.str already exists or not\n");
+   struct stat buf;
+   if (stat(filename.c_str(), &buf) != -1)
+   {
+      return true;
+   }
+   return false;
+}
+
+// Run cpp against the lines of the file.
+void cpplines (FILE* pipe, char* filename) {
+   int linenr = 1;
+   char inputname[LINESIZE];
+   strcpy (inputname, filename);
+   for (;;) {
+      char buffer[LINESIZE];
+      char* fgets_rc = fgets (buffer, LINESIZE, pipe);
+      if (fgets_rc == NULL) break;
+      chomp (buffer, '\n');
+      //printf ("%s:line %d: [%s]\n", filename, linenr, buffer);
+      // http://gcc.gnu.org/onlinedocs/cpp/Preprocessor-Output.html
+      int sscanf_rc = sscanf (buffer, "# %d \"%[^\"]\"",
+                              &linenr, inputname);
+      if (sscanf_rc == 2) {
+         continue;
+      }
+      char* savepos = NULL;
+      char* bufptr = buffer;
+      for (int tokenct = 1;; ++tokenct) {
+         char* token = strtok_r (bufptr, " \t\n", &savepos);
+         bufptr = NULL;
+         if (token == NULL) break;
+         DEBUGF('x', "token %d.%d: [%s]\n",
+                 linenr, tokenct, token);
+         string_set::intern(token); 
+      }
+      ++linenr;
+   }
+   FILE *pFile;
+   std::string str(filename);
+   string substring = str.substr(0,str.length() - 3);
+   string strFilename = substring + ".str";
+   bool fileThere = fileExists(strFilename);
+   if (fileThere == true){
+      remove(strFilename.c_str());
+   }
+   pFile = fopen(strFilename.c_str(),"w");
+   string_set::dump(pFile);
+   fclose(pFile);
+   DEBUGF('x', "Dumped output into string ADT successfully\n");
+}
+
+int main (int argc, char** argv) {
+   exec::execname = basename(argv[0]);
+   const char* execname = basename (argv[0]);
+   int exit_status = EXIT_SUCCESS;
+   //for (int argi = 1; argi < argc; ++argi) {
+
+      int superBreak = -1;     
+      int argi = 1;
+      int dFlag = -1;
+      string dString;
+ 
+      //go through all the options
+      int opt;
+      while ((opt = getopt(argc, argv, "D:@@:")) != -1) {
+         if (opt == 'D') {
+            printf("D flag enabled\n");
+            std::string optarg2(optarg);
+            dString = optarg2;
+            dFlag = 0;
+         } else if (opt == '@@') {
+            printf("@@ flag enabled\n");
+            std::string optarg2(optarg);
+            if (optarg2.compare("x") == 0){
+               set_debugflags("x");
+            } else if (optarg2.compare("z") == 0){
+               set_debugflags("z");
+            } else if (optarg2.compare("a") == 0){
+               //CUSTOM FLAG HERE?
+            } else{
+               superBreak = 0;
+               break;
+            }
+         } else if (opt == 'l'){
+
+         } else if (opt == 'y'){
+
+         } else{
+            superBreak = 0;
+            break;
+         }
+         argi++;
+      }
+
+      if (superBreak == 0){
+         exit_status = EXIT_FAILURE;
+         printf("gets into superBreak part2\n");
+         //PRINT => print error message here for invalid option
+      }else{
+         char* filename = argv[argi];
+         string command;
+         if (dFlag == 0){
+            command = CPP + " -D" + dString + " " + filename; 
+         }else{
+            command = CPP + " " + filename;
+         }
+         printf ("command=\"%s\"\n", command.c_str());
+         FILE* pipe = popen (command.c_str(), "r");
+         if (pipe == NULL) {
+            exit_status = EXIT_FAILURE;
+            fprintf (stderr, "%s: %s: %s\n",
+                     execname, command.c_str(), strerror (errno));
+         }else {
+            cpplines (pipe, filename);
+            int pclose_rc = pclose (pipe);
+            eprint_status (command.c_str(), pclose_rc);
+            if (pclose_rc != 0) exit_status = EXIT_FAILURE;
+         }
+      }
+   //}
+   //std::cout << "hi" << std::endl; 
+   return exit_status;
+}
+
+@
