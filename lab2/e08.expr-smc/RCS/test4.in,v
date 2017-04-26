@@ -1,0 +1,43 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2015.07.08.20.43.56;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2015.07.08.20.29.32;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@// $Id: test4.in,v 1.1 2015-07-08 13:29:32-07 - - $
+#include "test4a.inh"
+#include "test4b.inh"
+3*4;
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+ t// $Id: test4.in,v 1.1 2015-07-08 13:24:25-07 - - $
+@

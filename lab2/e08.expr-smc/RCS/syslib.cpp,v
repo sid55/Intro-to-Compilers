@@ -1,0 +1,280 @@
+head	1.5;
+access;
+symbols;
+locks;
+comment	@// @;
+
+
+1.5
+date	2015.07.10.01.10.52;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2015.07.09.21.29.59;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2015.07.09.21.08.58;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2015.07.09.02.21.19;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2015.07.09.00.45.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.5
+log
+@-
+@
+text
+@// $Id: syslib.cpp,v 1.4 2015-07-09 14:29:59-07 - - $
+
+#include <assert.h>
+#include <errno.h>
+#include <libgen.h>
+#include <limits.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <wait.h>
+
+#include "syslib.h"
+
+string exec::execname;
+int exec::exit_status = EXIT_SUCCESS;
+void exec::set_status (int status) {
+   status &= 0xFF;
+   if (exec::exit_status < status) exec::exit_status = status;
+}
+
+void errprintf (const char* format, ...) {
+   exec::exit_status = EXIT_FAILURE;
+   fflush (nullptr);
+   va_list args;
+   va_start (args, format);
+   fprintf (stderr, "%s: ", exec::execname.c_str());
+   vfprintf (stderr, format, args);
+   va_end (args);
+   fflush (nullptr);
+}
+
+void syserrprintf (const char* object) {
+   errprintf ("%s: %s\n", object, strerror (errno));
+}
+
+
+static void eprint_signal (const char* kind, int signal) {
+   fprintf (stderr, ", %s %d", kind, signal);
+   const char* sigstr = strsignal (signal);
+   if (sigstr != NULL) fprintf (stderr, " %s", sigstr);
+}
+
+void eprint_status (const char* command, int status) {
+   if (status == 0) return; 
+   fprintf (stderr, "%s: status 0x%04X", command, status);
+   if (WIFEXITED (status)) {
+      fprintf (stderr, ", exit %d", WEXITSTATUS (status));
+   }
+   if (WIFSIGNALED (status)) {
+      eprint_signal ("Terminated", WTERMSIG (status));
+      #ifdef WCOREDUMP
+      if (WCOREDUMP (status)) fprintf (stderr, ", core dumped");
+      #endif
+   }
+   if (WIFSTOPPED (status)) {
+      eprint_signal ("Stopped", WSTOPSIG (status));
+   }
+   if (WIFCONTINUED (status)) {
+      fprintf (stderr, ", Continued");
+   }
+   fprintf (stderr, "\n");
+}
+
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: syslib.cpp,v 1.3 2015-07-09 14:08:58-07 - - $
+d15 6
+a20 2
+static int exitstatus = EXIT_SUCCESS;
+static const char* execname = NULL;
+d22 9
+a30 2
+void set_execname (char* argv0) {
+   execname = basename (argv0);
+d33 2
+a34 3
+const char* get_execname() {
+   assert (execname != NULL);
+   return execname;
+d37 1
+a64 24
+
+void errprintf (const char* format, ...) {
+   exitstatus = EXIT_FAILURE;
+   fflush (nullptr);
+   va_list args;
+   va_start (args, format);
+   fprintf (stderr, "%s: ", get_execname());
+   vfprintf (stderr, format, args);
+   va_end (args);
+   fflush (nullptr);
+}
+
+void syserrprintf (const char* object) {
+   errprintf ("%s: %s\n", object, strerror (errno));
+}
+
+int get_exitstatus() {
+   return exitstatus;
+}
+
+void set_exitstatus (int newexitstatus) {
+   if (exitstatus < newexitstatus) exitstatus = newexitstatus;
+}
+
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: syslib.cpp,v 1.2 2015-07-08 19:21:19-07 - - $
+a16 2
+static const char* debugflags = "";
+static bool alldebugflags = false;
+a70 1
+   DEBUGF ('x', "exitstatus = %d\n", exitstatus);
+a75 26
+   DEBUGF ('x', "exitstatus = %d\n", exitstatus);
+}
+
+
+void set_debugflags (const char* flags) {
+   debugflags = flags;
+   if (strchr (debugflags, '@@') != NULL) alldebugflags = true;
+   DEBUGF ('x', "Debugflags = \"%s\", all = %d\n",
+           debugflags, alldebugflags);
+}
+
+bool is_debugflag (char flag) {
+   return alldebugflags or strchr (debugflags, flag) != NULL;
+}
+
+void __debugprintf (char flag, const char* file, int line,
+                    const char* func, const char* format, ...) {
+   va_list args;
+   if (not is_debugflag (flag)) return;
+   fflush (NULL);
+   va_start (args, format);
+   fprintf (stderr, "DEBUGF(%c): %s:%d(%s): ",
+            flag, file, line, func);
+   vfprintf (stderr, format, args);
+   va_end (args);
+   fflush (NULL);
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: syslib.cpp,v 1.1 2015-07-08 17:45:16-07 - - $
+d24 1
+a24 1
+const char* get_execname (void) {
+a55 5
+int get_exitstatus (void) {
+   DEBUGF ('x', "exitstatus = %d\n", exitstatus);
+   return exitstatus;
+}
+
+d72 5
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: syslib.cpp,v 1.1 2015-07-08 13:29:32-07 - - $
+d30 1
+a30 1
+   eprintf (", %s %d", kind, signal);
+d37 1
+a37 1
+   eprintf ("%s: status 0x%04X", command, status);
+d39 1
+a39 1
+      eprintf (", exit %d", WEXITSTATUS (status));
+d44 1
+a44 1
+      if (WCOREDUMP (status)) eprintf (", core dumped");
+d51 1
+a51 1
+      eprintf (", Continued");
+d53 1
+a53 1
+   eprintf ("\n");
+a61 19
+void veprintf (const char* format, va_list args) {
+   assert (execname != NULL);
+   assert (format != NULL);
+   fflush (NULL);
+   if (strstr (format, "%:") == format) {
+      fprintf (stderr, "%s: ", get_execname ());
+      format += 2;
+   }
+   vfprintf (stderr, format, args);
+   fflush (NULL);
+}
+
+void eprintf (const char* format, ...) {
+   va_list args;
+   va_start (args, format);
+   veprintf (format, args);
+   va_end (args);
+}
+
+d63 2
+d67 2
+a68 1
+   veprintf (format, args);
+d70 1
+a70 1
+   exitstatus = EXIT_FAILURE;
+d74 1
+a74 1
+   errprintf ("%:%s: %s\n", object, strerror (errno));
+@

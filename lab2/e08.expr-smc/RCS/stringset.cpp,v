@@ -1,0 +1,130 @@
+head	1.3;
+access;
+symbols;
+locks;
+comment	@// @;
+
+
+1.3
+date	2015.07.09.02.21.19;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2015.07.08.21.05.24;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2015.07.08.20.29.32;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@-
+@
+text
+@// $Id: stringset.cpp,v 1.2 2015-07-08 14:05:24-07 - - $
+
+#include <string>
+#include <unordered_set>
+using namespace std;
+
+#include "stringset.h"
+
+unordered_set<string> stringset::set;
+
+stringset::stringset() {
+   set.max_load_factor (0.5);
+}
+
+const string* stringset::intern (const char* string) {
+   auto handle = set.insert (string);
+   return &*handle.first;
+}
+
+void stringset::dump (FILE* out) {
+   size_t max_bucket_size = 0;
+   for (size_t bucket = 0; bucket < set.bucket_count(); ++bucket) {
+      bool need_index = true;
+      size_t curr_size = set.bucket_size (bucket);
+      if (max_bucket_size < curr_size) max_bucket_size = curr_size;
+      for (auto itor = set.cbegin (bucket);
+           itor != set.cend (bucket); ++itor) {
+         if (need_index) fprintf (out, "stringset[%4zu]: ", bucket);
+                    else fprintf (out, "          %4s   ", "");
+         need_index = false;
+         const string* str = &*itor;
+         fprintf (out, "%22zu %p->\"%s\"\n", set.hash_function()(*str),
+                  str, str->c_str());
+      }
+   }
+   fprintf (out, "load_factor = %.3f\n", set.load_factor());
+   fprintf (out, "bucket_count = %zu\n", set.bucket_count());
+   fprintf (out, "max_bucket_size = %zu\n", max_bucket_size);
+}
+
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: stringset.cpp,v 1.1 2015-07-08 13:29:32-07 - - $
+d9 1
+a9 3
+struct stringset: public unordered_set<string> {
+   stringset() { max_load_factor (0.5); }
+} set;
+d11 6
+a16 2
+const string* intern_stringset (const char* string) {
+   pair<stringset::const_iterator,bool> handle = set.insert (string);
+d20 1
+a20 1
+void dump_stringset (FILE* out) {
+d28 1
+a28 1
+         if (need_index) fprintf (out, "stringset[%4lu]: ", bucket);
+d32 1
+a32 1
+         fprintf (out, "%22lu %p->\"%s\"\n", set.hash_function()(*str),
+d37 2
+a38 2
+   fprintf (out, "bucket_count = %lu\n", set.bucket_count());
+   fprintf (out, "max_bucket_size = %lu\n", max_bucket_size);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: stringset.cpp,v 1.1 2015-07-08 13:24:25-07 - - $
+d9 3
+a11 5
+using stringset = unordered_set<string>;
+using stringset_citor = stringset::const_iterator;
+using stringset_bucket_citor = stringset::const_local_iterator;
+
+stringset set;
+d14 1
+a14 1
+   pair<stringset_citor,bool> handle = set.insert (string);
+d24 1
+a24 1
+      for (stringset_bucket_citor itor = set.cbegin (bucket);
+@

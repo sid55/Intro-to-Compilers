@@ -1,0 +1,232 @@
+head	1.7;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.7
+date	2016.10.28.02.45.59;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2016.10.20.20.48.57;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2016.08.18.22.05.42;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2015.11.13.21.50.39;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2015.07.09.21.08.58;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2015.07.09.00.45.16;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2015.07.08.21.39.44;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.7
+log
+@-
+@
+text
+@/* $Id: lexer.l,v 1.6 2016-10-20 13:48:57-07 - - $ */
+
+%{
+
+#include "lyutils.h"
+
+#define YY_USER_ACTION  { lexer::advance(); }
+
+int yylval_token (int symbol) {
+   yylval = new astree (symbol, lexer::lloc, yytext);
+   return symbol;
+}
+
+%}
+
+%option 8bit
+%option debug
+%option nodefault
+%option noinput
+%option nounput
+%option noyywrap
+%option warn
+/*%option verbose*/
+
+LETTER          [A-Za-z_]
+DIGIT           [0-9]
+MANTISSA        ({DIGIT}+\.?{DIGIT}*|\.{DIGIT}+)
+EXPONENT        ([Ee][+-]?{DIGIT}+)
+NUMBER          ({MANTISSA}{EXPONENT}?)
+NOTNUMBER       ({MANTISSA}[Ee][+-]?)
+IDENT           ({LETTER}({LETTER}|{DIGIT})*)
+
+%%
+
+"#".*           { lexer::include(); }
+[ \t]+          { }
+\n              { lexer::newline(); }
+
+{NUMBER}        { return yylval_token (NUMBER); }
+{IDENT}         { return yylval_token (IDENT); }
+"="             { return yylval_token ('='); }
+"+"             { return yylval_token ('+'); }
+"-"             { return yylval_token ('-'); }
+"*"             { return yylval_token ('*'); }
+"/"             { return yylval_token ('/'); }
+"^"             { return yylval_token ('^'); }
+"("             { return yylval_token ('('); }
+")"             { return yylval_token (')'); }
+";"             { return yylval_token (';'); }
+
+{NOTNUMBER}     { lexer::badtoken (yytext);
+                  return yylval_token (NUMBER); }
+.               { lexer::badchar (*yytext); }
+
+%%
+
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: lexer.l,v 1.5 2016-08-18 15:05:42-07 - - $ */
+d9 2
+a10 2
+int yylval_token (int symbol) { \
+   yylval = new astree (int symbol, lexer::lloc, yytext);
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: lexer.l,v 1.4 2015-11-13 13:50:39-08 - - $ */
+d9 3
+a11 3
+#define RETURN(SYMBOL) { \
+   yylval = new astree (SYMBOL, lexer::lloc, yytext); \
+   return SYMBOL; \
+d39 11
+a49 11
+{NUMBER}        { RETURN (NUMBER); }
+{IDENT}         { RETURN (IDENT); }
+"="             { RETURN ('='); }
+"+"             { RETURN ('+'); }
+"-"             { RETURN ('-'); }
+"*"             { RETURN ('*'); }
+"/"             { RETURN ('/'); }
+"^"             { RETURN ('^'); }
+"("             { RETURN ('('); }
+")"             { RETURN (')'); }
+";"             { RETURN (';'); }
+d51 2
+a52 1
+{NOTNUMBER}     { lexer::badtoken (yytext); RETURN (NUMBER); }
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: lexer.l,v 1.3 2015-07-09 14:08:58-07 - - $ */
+d5 1
+a5 1
+#include "utils.h"
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: lexer.l,v 1.2 2015-07-08 17:45:16-07 - - $ */
+a21 1
+%option verbose
+d23 1
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: lexer.l,v 1.1 2015-07-08 14:39:44-07 - - $ */
+a4 1
+#include "syslib.h"
+d7 6
+a12 1
+#define YY_USER_ACTION  { lexer::useraction (); }
+d39 11
+a49 15
+{NUMBER}        { return yylval_token (NUMBER); }
+{IDENT}         { return yylval_token (IDENT); }
+
+"="             { return yylval_token ('='); }
+"+"             { return yylval_token ('+'); }
+"-"             { return yylval_token ('-'); }
+"*"             { return yylval_token ('*'); }
+"/"             { return yylval_token ('/'); }
+"^"             { return yylval_token ('^'); }
+"("             { return yylval_token ('('); }
+")"             { return yylval_token (')'); }
+";"             { return yylval_token (';'); }
+
+{NOTNUMBER}     { lexer::badtoken (yytext);
+                  return yylval_token (NUMBER); }
+d51 1
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+/* $Id: scanner.l,v 1.2 2015-07-08 14:08:39-07 - - $ */
+d5 1
+a5 1
+#include "auxlib.h"
+@

@@ -1,0 +1,27 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2015.07.10.01.33.22;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@// $Id: test4a.inh,v 1.1 2012-10-11 19:07:58-07 - - $
+#define PI 3.141592653589793238462643383280
+pi=PI;
+pi;
+@

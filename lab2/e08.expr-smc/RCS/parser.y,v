@@ -1,0 +1,358 @@
+head	1.14;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.14
+date	2016.10.06.23.26.41;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2016.08.18.22.05.42;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2015.07.09.21.52.13;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2015.07.09.21.08.58;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2015.07.09.02.21.19;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2015.07.09.00.45.16;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2015.07.08.21.57.35;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2015.07.08.21.45.09;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2015.07.08.21.39.44;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2015.07.08.21.28.49;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2015.07.08.21.19.43;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2015.07.08.21.18.52;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2015.07.08.21.15.55;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2015.07.08.20.29.32;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.14
+log
+@-
+@
+text
+@// $Id: parser.y,v 1.13 2016-08-18 15:05:42-07 - - $
+
+%{
+
+#include <assert.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "astree.h"
+#include "lyutils.h"
+
+%}
+
+%debug
+%defines
+%error-verbose
+%token-table
+%verbose
+
+%destructor { destroy ($$); } <>
+%printer { astree::dump (yyoutput, $$); } <>
+
+%initial-action {
+   parser::root = new astree (ROOT, {0, 0, 0}, "<<ROOT>>");
+}
+
+%token  ROOT IDENT NUMBER
+
+%right  '='
+%left   '+' '-'
+%left   '*' '/'
+%right  '^'
+%right  POS NEG
+
+%start  program
+
+
+%%
+
+program : stmtseq               { $$ = $1 = nullptr; }
+        ;
+
+stmtseq : stmtseq expr ';'      { destroy ($3); $$ = $1->adopt ($2); }
+        | stmtseq error ';'     { destroy ($3); $$ = $1; }
+        | stmtseq ';'           { destroy ($2); $$ = $1; }
+        |                       { $$ = parser::root; }
+        ;
+
+expr    : expr '=' expr         { $$ = $2->adopt ($1, $3); }
+        | expr '+' expr         { $$ = $2->adopt ($1, $3); }
+        | expr '-' expr         { $$ = $2->adopt ($1, $3); }
+        | expr '*' expr         { $$ = $2->adopt ($1, $3); }
+        | expr '/' expr         { $$ = $2->adopt ($1, $3); }
+        | expr '^' expr         { $$ = $2->adopt ($1, $3); }
+        | '+' expr %prec POS    { $$ = $1->adopt_sym ($2, POS); }
+        | '-' expr %prec NEG    { $$ = $1->adopt_sym ($2, NEG); }
+        | '(' expr ')'          { destroy ($1, $3); $$ = $2; }
+        | IDENT                 { $$ = $1; }
+        | NUMBER                { $$ = $1; }
+        ;
+
+%%
+
+const char* parser::get_tname (int symbol) {
+   return yytname [YYTRANSLATE (symbol)];
+}
+
+@
+
+
+1.13
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.12 2015-07-09 14:52:13-07 - - $
+a10 1
+#include "yylex.h"
+@
+
+
+1.12
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.11 2015-07-09 14:08:58-07 - - $
+d10 1
+a10 1
+#include "utils.h"
+@
+
+
+1.11
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.10 2015-07-08 19:21:19-07 - - $
+d25 1
+a25 1
+   parser::ast_root = new astree (ROOT, {0, 0, 0}, "<<ROOT>>");
+d47 1
+a47 1
+        |                       { $$ = parser::ast_root; }
+@
+
+
+1.10
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.9 2015-07-08 17:45:16-07 - - $
+d22 1
+a22 1
+%printer { astree::print (yyoutput, $$); } <>
+d25 1
+a25 1
+   parser::ast_root = new astree (ROOT, 0, 0, 0, "<<ROOT>>");
+a27 1
+
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.8 2015-07-08 14:57:35-07 - - $
+d11 1
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.7 2015-07-08 14:45:09-07 - - $
+a68 4
+bool parser::is_defined (int symbol) {
+   return YYTRANSLATE (symbol) > YYUNDEFTOK;
+}
+
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.6 2015-07-08 14:39:44-07 - - $
+d24 1
+a24 1
+   yyparse_astree = new astree (ROOT, 0, 0, 0, "<<ROOT>>");
+d47 1
+a47 1
+        |                       { $$ = yyparse_astree; }
+d65 1
+a65 1
+const char* get_yytname (int symbol) {
+d69 1
+a69 1
+bool is_defined_token (int symbol) {
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.5 2015-07-08 14:28:49-07 - - $
+d23 5
+d47 1
+a47 1
+        |                       { $$ = new_parseroot(); }
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.4 2015-07-08 14:19:43-07 - - $
+a8 1
+#include "lyutils.h"
+d10 1
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.3 2015-07-08 14:18:52-07 - - $
+d21 1
+a21 1
+%printer { yyprint (yyoutput, $$); } <>
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.2 2015-07-08 14:15:55-07 - - $
+d20 1
+a20 1
+%destructor { yydestroy ($$); } <>
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.1 2015-07-08 13:29:32-07 - - $
+d20 1
+a20 1
+%destructor { destroy ($$); } <>
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: parser.y,v 1.1 2015-07-08 13:24:25-07 - - $
+a11 3
+#define YYDEBUG 1
+#define YYERROR_VERBOSE 1
+
+d36 1
+a36 1
+program : stmtseq               { $$ = $1; }
+@

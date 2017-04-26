@@ -1,0 +1,85 @@
+head	1.3;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.3
+date	2015.07.09.02.21.19;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2015.07.09.00.45.16;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2015.07.08.20.29.32;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@-
+@
+text
+@// $Id: stringset.h,v 1.2 2015-07-08 17:45:16-07 - - $
+
+#ifndef __STRINGSET__
+#define __STRINGSET__
+
+#include <string>
+#include <unordered_set>
+using namespace std;
+
+#include <stdio.h>
+
+#include "syslib.h"
+
+struct stringset {
+   stringset();
+   static unordered_set<string> set;
+   static const string* intern (const char*);
+   static void dump (FILE*);
+};
+
+#endif
+
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: stringset.h,v 1.1 2015-07-08 13:29:32-07 - - $
+d14 6
+a19 3
+const string* intern_stringset (const char*);
+
+void dump_stringset (FILE*);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: stringset.h,v 1.1 2015-07-08 13:24:25-07 - - $
+d12 1
+a12 1
+#include "auxlib.h"
+@

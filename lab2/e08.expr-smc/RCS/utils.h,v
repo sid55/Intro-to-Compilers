@@ -1,0 +1,255 @@
+head	1.9;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.9
+date	2015.07.10.01.10.52;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2015.07.09.21.52.13;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2015.07.09.21.29.59;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2015.07.09.21.08.58;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2015.07.09.02.21.19;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2015.07.09.00.45.16;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2015.07.08.21.57.35;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2015.07.08.21.45.09;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2015.07.08.21.39.44;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@-
+@
+text
+@// $Id: utils.h,v 1.8 2015-07-09 14:52:13-07 - - $
+
+#ifndef __UTILS_H__
+#define __UTILS_H__
+
+// Lex and Yacc interface utility.
+
+#include <string>
+#include <vector>
+using namespace std;
+
+#include <stdio.h>
+
+#include "astree.h"
+#include "syslib.h"
+
+extern int yy_flex_debug;
+extern int yydebug;
+
+int yyparse();
+void yyerror (const char* message);
+
+struct lexer {
+   static bool interactive;
+   static location lloc;
+   static size_t last_yyleng;
+   static vector<string> filenames;
+   static const string* filename (int filenr);
+   static void newfilename (const string& filename);
+   static void advance();
+   static void newline();
+   static void badchar (unsigned char bad);
+   static void badtoken (char* lexeme);
+   static void include();
+};
+
+struct parser {
+   static astree* root;
+   static const char* get_tname (int symbol);
+};
+
+#define YYSTYPE astree*
+#include "yyparse.h"
+
+#endif
+
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: utils.h,v 1.7 2015-07-09 14:29:59-07 - - $
+a16 1
+extern int yyin_linenr;
+d42 1
+a42 3
+
+using astree_pointer = astree*;
+#define YYSTYPE astree_pointer
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: utils.h,v 1.6 2015-07-09 14:08:58-07 - - $
+d39 1
+a39 1
+   static astree* ast_root;
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: utils.h,v 1.5 2015-07-08 19:21:19-07 - - $
+d30 1
+a30 1
+   static void newfilename (const char* filename);
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: utils.h,v 1.4 2015-07-08 17:45:16-07 - - $
+a16 1
+#define YYEOF 0
+d21 1
+a21 1
+int yyparse (void);
+d26 2
+a28 1
+   static location lloc;
+d31 2
+a32 2
+   static void newline (void);
+   static void useraction (void);
+d35 1
+a35 1
+   static void include (void);
+a42 1
+int yylval_token (int symbol);
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: utils.h,v 1.3 2015-07-08 14:57:35-07 - - $
+d8 4
+a17 2
+
+extern FILE* yyin;
+a18 1
+extern char* yytext;
+a20 1
+extern int yyleng;
+a21 1
+int yylex (void);
+a23 1
+int yylex_destroy (void);
+d26 3
+a31 1
+   static void setecho (bool echoflag);
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: utils.h,v 1.2 2015-07-08 14:45:09-07 - - $
+d11 1
+a11 1
+#include "auxlib.h"
+a40 1
+   static bool is_defined (int symbol);
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: utils.h,v 1.1 2015-07-08 14:39:44-07 - - $
+a15 1
+extern astree* yyparse_astree;
+a25 2
+const char* get_yytname (int symbol);
+bool is_defined_token (int symbol);
+d38 6
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: utils.h,v 1.2 2015-07-08 14:15:55-07 - - $
+a40 1
+astree* new_parseroot (void);
+@
