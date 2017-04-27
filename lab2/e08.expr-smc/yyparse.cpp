@@ -441,8 +441,8 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    40,    40,    43,    44,    45,    46,    49,    50,    51,
-      52,    53,    54,    55,    56,    57,    58,    59
+       0,    39,    39,    42,    43,    44,    45,    48,    49,    50,
+      51,    52,    53,    54,    55,    56,    57,    58
 };
 #endif
 
@@ -1598,97 +1598,97 @@ yyreduce:
     {
         case 2:
 /* Line 1792 of yacc.c  */
-#line 40 "parser.y"
+#line 39 "parser.y"
     { (yyval) = (yyvsp[(1) - (1)]) = nullptr; }
     break;
 
   case 3:
 /* Line 1792 of yacc.c  */
-#line 43 "parser.y"
+#line 42 "parser.y"
     { destroy ((yyvsp[(3) - (3)])); (yyval) = (yyvsp[(1) - (3)])->adopt ((yyvsp[(2) - (3)])); }
     break;
 
   case 4:
 /* Line 1792 of yacc.c  */
-#line 44 "parser.y"
+#line 43 "parser.y"
     { destroy ((yyvsp[(3) - (3)])); (yyval) = (yyvsp[(1) - (3)]); }
     break;
 
   case 5:
 /* Line 1792 of yacc.c  */
-#line 45 "parser.y"
+#line 44 "parser.y"
     { destroy ((yyvsp[(2) - (2)])); (yyval) = (yyvsp[(1) - (2)]); }
     break;
 
   case 6:
 /* Line 1792 of yacc.c  */
-#line 46 "parser.y"
+#line 45 "parser.y"
     { (yyval) = parser::root; }
     break;
 
   case 7:
 /* Line 1792 of yacc.c  */
-#line 49 "parser.y"
+#line 48 "parser.y"
     { (yyval) = (yyvsp[(2) - (3)])->adopt ((yyvsp[(1) - (3)]), (yyvsp[(3) - (3)])); }
     break;
 
   case 8:
 /* Line 1792 of yacc.c  */
-#line 50 "parser.y"
+#line 49 "parser.y"
     { (yyval) = (yyvsp[(2) - (3)])->adopt ((yyvsp[(1) - (3)]), (yyvsp[(3) - (3)])); }
     break;
 
   case 9:
 /* Line 1792 of yacc.c  */
-#line 51 "parser.y"
+#line 50 "parser.y"
     { (yyval) = (yyvsp[(2) - (3)])->adopt ((yyvsp[(1) - (3)]), (yyvsp[(3) - (3)])); }
     break;
 
   case 10:
 /* Line 1792 of yacc.c  */
-#line 52 "parser.y"
+#line 51 "parser.y"
     { (yyval) = (yyvsp[(2) - (3)])->adopt ((yyvsp[(1) - (3)]), (yyvsp[(3) - (3)])); }
     break;
 
   case 11:
 /* Line 1792 of yacc.c  */
-#line 53 "parser.y"
+#line 52 "parser.y"
     { (yyval) = (yyvsp[(2) - (3)])->adopt ((yyvsp[(1) - (3)]), (yyvsp[(3) - (3)])); }
     break;
 
   case 12:
 /* Line 1792 of yacc.c  */
-#line 54 "parser.y"
+#line 53 "parser.y"
     { (yyval) = (yyvsp[(2) - (3)])->adopt ((yyvsp[(1) - (3)]), (yyvsp[(3) - (3)])); }
     break;
 
   case 13:
 /* Line 1792 of yacc.c  */
-#line 55 "parser.y"
+#line 54 "parser.y"
     { (yyval) = (yyvsp[(1) - (2)])->adopt_sym ((yyvsp[(2) - (2)]), POS); }
     break;
 
   case 14:
 /* Line 1792 of yacc.c  */
-#line 56 "parser.y"
+#line 55 "parser.y"
     { (yyval) = (yyvsp[(1) - (2)])->adopt_sym ((yyvsp[(2) - (2)]), NEG); }
     break;
 
   case 15:
 /* Line 1792 of yacc.c  */
-#line 57 "parser.y"
+#line 56 "parser.y"
     { destroy ((yyvsp[(1) - (3)]), (yyvsp[(3) - (3)])); (yyval) = (yyvsp[(2) - (3)]); }
     break;
 
   case 16:
 /* Line 1792 of yacc.c  */
-#line 58 "parser.y"
+#line 57 "parser.y"
     { (yyval) = (yyvsp[(1) - (1)]); }
     break;
 
   case 17:
 /* Line 1792 of yacc.c  */
-#line 59 "parser.y"
+#line 58 "parser.y"
     { (yyval) = (yyvsp[(1) - (1)]); }
     break;
 
@@ -1926,7 +1926,7 @@ yyreturn:
 
 
 /* Line 2055 of yacc.c  */
-#line 62 "parser.y"
+#line 61 "parser.y"
 
 
 const char* parser::get_tname (int symbol) {

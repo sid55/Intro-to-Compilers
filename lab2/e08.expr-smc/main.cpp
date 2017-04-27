@@ -86,6 +86,37 @@ void cpplines (FILE* pipe, char* filename) {
    DEBUGF('x', "Dumped output into string ADT successfully\n");
 }
 
+//similar method as above but for assignment 2 now
+void cpplines2 (char* filename) {
+   FILE *pFile;
+   std::string str(filename);
+   string substring = str.substr(0,str.length() - 3);
+   string strFilename = substring + ".tok";
+   bool fileThere = fileExists(strFilename);
+   if (fileThere == true){
+      remove(strFilename.c_str());
+   }
+   pFile = fopen(strFilename.c_str(),"w"); //opening token file
+
+   int a;
+   while (a = yylex()){
+      string tname = parser::get_tname(a);
+      std::cout << tname << std::endl;
+      std::cout << "\n\n\n" << std::endl;
+      //astree myTree; //needs a, string, and something else?
+      //call dump method next of astree?
+      //astree *myTree = parser::root->adopt_sym(parser::root, a);
+      //parser::root->adopt(parser::root, myTree); 
+   }
+
+   parser::root->print(pFile, parser::root, 2);
+    
+
+   fclose(pFile);
+   DEBUGF('x', "Dumped output into string ADT successfully\n");
+}
+
+
 int main (int argc, char** argv) {
    exec::execname = basename(argv[0]);
    const char* execname = basename (argv[0]);
@@ -99,7 +130,9 @@ int main (int argc, char** argv) {
  
       //go through all the options
       int opt;
-      while ((opt = getopt(argc, argv, "D:@:")) != -1) {
+      yy_flex_debug = 0;
+      yydebug = 0;
+      while ((opt = getopt(argc, argv, "D:l:@:")) != -1) {
          if (opt == 'D') {
             std::string optarg2(optarg);
             dString = optarg2;
@@ -117,9 +150,9 @@ int main (int argc, char** argv) {
                break;
             }
          } else if (opt == 'l'){
-
+            yy_flex_debug = 1;
          } else if (opt == 'y'){
-
+            yydebug = 1;
          } else{
             superBreak = 0;
             break;
@@ -150,6 +183,38 @@ int main (int argc, char** argv) {
             if (pclose_rc != 0) exit_status = EXIT_FAILURE;
          }
       }
+
+      
+      char* filename = argv[argi];
+      string command;
+      if (dFlag == 0){
+         command = CPP + " -D" + dString + " " + filename; 
+      }else{
+         command = CPP + " " + filename;
+      }
+      yyin = popen (command.c_str(), "r");
+      if (yyin == NULL) {
+         exit_status = EXIT_FAILURE;
+         fprintf (stderr, "%s: %s: %s\n",
+                  execname, command.c_str(), strerror (errno));
+      }else {
+         lexer::newfilename(command);
+         cpplines2 (filename);
+         int pclose_rc = pclose (yyin);
+         eprint_status (command.c_str(), pclose_rc);
+         if (pclose_rc != 0) exit_status = EXIT_FAILURE;
+
+         if (yydebug or yy_flex_debug) {
+            fprintf (stderr, "Dumping parser::root:\n");
+            if (parser::root != nullptr) parser::root->dump_tree (stderr);
+            fprintf (stderr, "Dumping string_set:\n");
+            string_set::dump (stderr);
+         }
+
+         //astree::print(stdout, parser::root); 
+      }
+      
+
    //}
    return exit_status;
 }
