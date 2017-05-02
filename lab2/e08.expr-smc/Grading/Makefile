@@ -52,11 +52,10 @@ ${PARSECPP} ${PARSEHDR} : ${BISONSRC}
 	${BISON} ${BISONSRC}
 	${XML2HTML} yyparse.xml >yyparse.html
 
-
-ci : ${ALLSRC} ${TESTINS}
-	- checksource ${ALLSRC}
-	- cpplint.py.perl ${CPPSRC}
-	cid + ${ALLSRC} ${TESTINS} test?.inh
+ci : 
+	git add -A
+	git commit -m "Pushing files into repo"
+	git push
 
 lis : ${LISTSRC} tests
 	mkpspdf List.source.ps ${LISTSRC}
