@@ -1,4 +1,4 @@
-/* $Id: lexer.l,v 1.7 2016-10-27 19:45:59-07 - - $ */
+/* $Id: scanner.l,v 1.7 2016-10-27 19:45:59-07 - - $ */
 
 %{
 
@@ -37,7 +37,7 @@ IDENT           ({LETTER}({LETTER}|{DIGIT})*)
 \n              { lexer::newline(); }
 
 {NUMBER}        { return yylval_token (NUMBER); }
-{IDENT}         { return yylval_token (IDENT); }
+{IDENT}         { return yylval_token (TOK_IDENT); }
 "="             { return yylval_token ('='); }
 "+"             { return yylval_token ('+'); }
 "-"             { return yylval_token ('-'); }

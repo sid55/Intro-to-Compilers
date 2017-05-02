@@ -20,7 +20,7 @@ LEXCPP    = yylex.cpp
 PARSECPP  = yyparse.cpp
 CGENS     = ${LEXCPP} ${PARSECPP}
 ALLGENS   = ${PARSEHDR} ${CGENS}
-EXECBIN   = zexprsm
+EXECBIN   = oc 
 ALLCSRC   = ${CPPSRC} ${CGENS}
 OBJECTS   = ${ALLCSRC:.cpp=.o}
 LEXOUT    = yylex.output
