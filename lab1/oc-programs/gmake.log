@@ -1,6 +1,1 @@
-Makefile:43: Makefile.dep: No such file or directory
-g++ -MM -std=gnu++14 token.cpp auxlib.cpp string_set.cpp >Makefile.dep
-g++ -g -O0 -Wall -Wextra -std=gnu++14 -c token.cpp
-g++ -g -O0 -Wall -Wextra -std=gnu++14 -c auxlib.cpp
-g++ -g -O0 -Wall -Wextra -std=gnu++14 -c string_set.cpp
-g++ -g -O0 -Wall -Wextra -std=gnu++14 -ooc token.o auxlib.o string_set.o
+gmake: Nothing to be done for `all'.

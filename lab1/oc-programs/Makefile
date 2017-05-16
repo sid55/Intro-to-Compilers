@@ -23,8 +23,11 @@ ${EXECBIN} : ${OBJECTS}
 	${GCC} -c $<
 
 ci :
-	cid + ${CHECKINS}
-	checksource ${CHECKINS}
+	#cid + ${CHECKINS}
+	#checksource ${CHECKINS}
+	git add -A
+	git commit -m "Pushing in current files" 
+	git push
 
 clean :
 	- rm ${OBJECTS}
