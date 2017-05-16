@@ -249,14 +249,26 @@ int main (int argc, char** argv) {
       }else{
          command = CPP + " " + filename;
       }
+   
+      std::string str(filename);
+      string substring = str.substr(0,str.length() - 3);
+      string strFilename = substring + ".tok";
+      bool fileThere = fileExists(strFilename);
+      if (fileThere == true){
+         remove(strFilename.c_str());
+      }
+      tok_file = fopen(strFilename.c_str(), "w");
+
+
       yyin = popen (command.c_str(), "r");
       if (yyin == NULL) {
          exit_status = EXIT_FAILURE;
          fprintf (stderr, "%s: %s: %s\n",
                   execname, command.c_str(), strerror (errno));
       }else {
-         lexer::newfilename(command);
-         cpplines2 (filename);
+         //lexer::newfilename(command);
+         //cpplines2 (filename);
+         yyparse();
          int pclose_rc = pclose (yyin);
 
          FILE *pFile;
@@ -271,6 +283,22 @@ int main (int argc, char** argv) {
          stringset::dump_stringset(pFile);
          fclose(pFile);
 
+         fclose(tok_file);
+
+         int truebool = 1;
+         if(truebool == 1){
+            FILE *pFile;
+            std::string str(filename);
+            string substring = str.substr(0,str.length() - 3);
+            string strFilename = substring + ".ast";
+            bool fileThere = fileExists(strFilename);
+            if (fileThere == true){
+               remove(strFilename.c_str());
+            }
+            pFile = fopen(strFilename.c_str(),"w");
+            astree::print(pFile, yyparse_astree, 0);
+            fclose(pFile);
+         }
 
          eprint_status (command.c_str(), pclose_rc);
          if (pclose_rc != 0) exit_status = EXIT_FAILURE;
