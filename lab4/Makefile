@@ -32,8 +32,9 @@ ${CYGEN} ${HYGEN} : ${YSOURCES}
 	bison --defines=${HYGEN} --output=${CYGEN} ${YSOURCES}
 
 ci:
-	-git add {CPPSOURCES} {HEADERS}
-	-git commit -m "Regular file saving"
+	git add -A
+	git commit -m "Regular file saving"
+	git push
 
 clean:
 	-rm ${OBJECTS} ${CLGEN} ${HYGEN} ${CYGEN} ${LREPORT} ${YREPORT}
