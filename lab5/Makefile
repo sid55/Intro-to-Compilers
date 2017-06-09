@@ -32,8 +32,9 @@ ${CYGEN} ${HYGEN} : ${YSOURCES}
 	bison --defines=${HYGEN} --output=${CYGEN} ${YSOURCES}
 
 ci:
-	-git add {CPPSOURCES} {HEADERS}
-	-git commit -m "Regular file saving"
+	git add -A
+	git commit -m "Pushing into asg5 repo"
+	git push
 
 clean:
 	-rm ${OBJECTS} ${CLGEN} ${HYGEN} ${CYGEN} ${LREPORT} ${YREPORT}
@@ -45,5 +46,5 @@ spotless:
 submit:
 	-checksource ${CPPSOURCES} ${HEADERS} ${LSOURCES} \
 	${YSOURCES} Makefile README
-	-submit cmps104a-wm.f16 asg5 ${CPPSOURCES} ${HEADERS} \
+	-submit cmps104a-wm.s17 asg5 ${CPPSOURCES} ${HEADERS} \
    ${LSOURCES} ${YSOURCES} Makefile README PARTNER
